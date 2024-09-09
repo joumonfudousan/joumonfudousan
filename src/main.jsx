@@ -9,6 +9,7 @@ import {
 import App from "./App.jsx";
 import Home from "./page/Home.jsx";
 import "./index.css";
+import "./config.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

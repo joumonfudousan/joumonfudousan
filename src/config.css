@@ -1,0 +1,26 @@
+body {
+    font-family: "Noto Sans JP";
+}
+
+.ant-modal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-modal-centered {
+    background-color: #ffff !important;
+}
+
+.ant-modal-content {
+    background-color: #ffff !important;
+    min-height: 95vh !important;
+    box-shadow: none !important;
+}
+
+:where(.css-dev-only-do-not-override-pbtb6).ant-tabs-top > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-pbtb6).ant-tabs-bottom > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-pbtb6).ant-tabs-top > div > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-pbtb6).ant-tabs-bottom > div > .ant-tabs-nav::before {
+    position: relative;
+}
