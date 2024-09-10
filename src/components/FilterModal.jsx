@@ -1,33 +1,75 @@
 import { Button, Checkbox, Flex, Modal, Slider } from "antd";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { HomeContext } from "../page/Home";
+import { locations } from "../data/mocData";
 
-FilterModal.propTypes = {
-  open: Boolean,
-  setOpen: AnalyserNode,
-};
+const dataBox1 = [
+  "コンロあり（石囲炉）",
+  "コンロあり（地床炉）",
+  "コンロあり（土器埋設炉）",
+  "なし",
+];
 
+const dataBox2 = ["冷蔵庫あり", "冷蔵庫なし"];
+
+const dataBox3 = [
+  "土器が学べる",
+  "土偶と暮らせる",
+  "アクセサリープレゼント",
+  "黒曜石プレゼント",
+];
+
+// eslint-disable-next-line react/prop-types
 function FilterModal({ open, setOpen }) {
-  const [slider, setSlider] = useState(19);
+  const { setData, keyLocation } = useContext(HomeContext);
+  const [form, setForm] = useState({
+    keyLocation: keyLocation,
+    size: 19,
+    heater: [],
+    fridge: [],
+    benefit: [],
+  });
 
-  const onCheckBox = (value) => {
-    console.log("checked", value);
+  console.log("keyLocation", keyLocation);
+  console.log("form", form);
+
+  useEffect(() => {
+    onChangForm("keyLocation", keyLocation);
+  }, [keyLocation]);
+
+  const onChangForm = (key, value) => {
+    setForm((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
   };
 
-  const dataBox1 = [
-    "コンロあり（石囲炉）",
-    "コンロあり（地床炉）",
-    "コンロあり（土器埋設炉）",
-    "なし",
-  ];
+  const onCheckBox = (key, dataValue) => {
+    let value = dataValue === "なし" ? "-" : dataValue;
+    setForm((prev) => {
+      const currentValues = prev[key];
+      const valueExists = currentValues.includes(value);
+      const updatedValues = valueExists
+        ? currentValues.filter((item) => item !== value)
+        : [...currentValues, value];
 
-  const dataBox2 = ["冷蔵庫あり", "冷蔵庫なし"];
+      return {
+        ...prev,
+        [key]: updatedValues,
+      };
+    });
+  };
 
-  const dataBox3 = [
-    "土器が学べる",
-    "土偶と暮らせる",
-    "アクセサリープレゼント",
-    "黒曜石プレゼント",
-  ];
+  const onSubmit = () => {
+    const dataFilter = locations.filter(
+      (item) =>
+        item.size <= form.size &&
+        (form.heater.length ? form.heater.includes(item.heater) : true)
+    );
+    console.log("dataFilter", dataFilter);
+    setData(dataFilter);
+    setOpen(false);
+  };
 
   return (
     <Modal
@@ -36,12 +78,7 @@ function FilterModal({ open, setOpen }) {
       open={open}
       onCancel={() => setOpen(false)}
       footer={
-        <Flex
-          className="mt-10"
-          justify="center"
-          gap={"small"}
-          vertical={false}
-        >
+        <Flex className="mt-10" justify="center" gap={"small"} vertical={false}>
           <Button
             type="text"
             className="text-[16px] w-[50%] font-semibold text-[#8FAA02]"
@@ -55,7 +92,7 @@ function FilterModal({ open, setOpen }) {
             key="submit"
             type="primary"
             shape="round"
-            onClick={() => setOpen(false)}
+            onClick={() => onSubmit()}
             className="flex-auto text-center text-[16px] font-semibold"
             size="large"
           >
@@ -78,8 +115,8 @@ function FilterModal({ open, setOpen }) {
               background: "rgb(143 170 2 / 38%)",
             },
           }}
-          defaultValue={slider}
-          onChange={(e) => setSlider(e)}
+          defaultValue={form.size}
+          onChange={(e) => onChangForm("size", e)}
         />
         <Flex
           className="cursor-pointer"
@@ -88,7 +125,7 @@ function FilterModal({ open, setOpen }) {
           vertical={false}
         >
           <div className="text-[14px] text-[#00000099]">下限なし</div>
-          <div className="text-[14px] text-[#00000099]">{slider}帖</div>
+          <div className="text-[14px] text-[#00000099]">{form.size}帖</div>
         </Flex>
         {/* box 1 */}
         <div className="text-[16px] font-semibold mt-5">コンロ</div>
@@ -97,7 +134,7 @@ function FilterModal({ open, setOpen }) {
             key={index}
             className="text-[16px] font-normal"
             value={item}
-            onChange={(e) => onCheckBox(e.target.value)}
+            onChange={(e) => onCheckBox("heater", e.target.value)}
           >
             {item}
           </Checkbox>
@@ -109,7 +146,7 @@ function FilterModal({ open, setOpen }) {
             key={index}
             className="text-[16px] font-normal"
             value={item}
-            onChange={(e) => onCheckBox(e.target.value)}
+            onChange={(e) => onCheckBox("fridge", e.target.value)}
           >
             {item}
           </Checkbox>
@@ -121,7 +158,7 @@ function FilterModal({ open, setOpen }) {
             key={index}
             className="text-[16px] font-normal"
             value={item}
-            onChange={(e) => onCheckBox(e.target.value)}
+            onChange={(e) => onCheckBox("benefit", e.target.value)}
           >
             {item}
           </Checkbox>
