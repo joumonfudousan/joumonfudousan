@@ -10,11 +10,13 @@ import App from "./App.jsx";
 import Home from "./page/Home.jsx";
 import "./index.css";
 import "./config.css";
+import Location from "./page/Location.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="home" element={<Home />} />
+      <Route path="ruins/*" element={<Location />} />
     </Route>
   )
 );

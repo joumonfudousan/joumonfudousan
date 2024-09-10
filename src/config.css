@@ -18,6 +18,26 @@ body {
     box-shadow: none !important;
 }
 
+.ant-carousel .slick-dots li.slick-active {
+    width: auto;
+}
+
+.ant-carousel .slick-dots li {
+    width: auto;
+}
+
+.ant-carousel .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
 :where(.css-dev-only-do-not-override-pbtb6).ant-tabs-top > .ant-tabs-nav::before,
 :where(.css-dev-only-do-not-override-pbtb6).ant-tabs-bottom > .ant-tabs-nav::before,
 :where(.css-dev-only-do-not-override-pbtb6).ant-tabs-top > div > .ant-tabs-nav::before,
