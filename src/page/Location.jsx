@@ -12,6 +12,7 @@ import train from "../assets/train.svg";
 import map from "../assets/map.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
+import { useEffect } from "react";
 
 function Location() {
   const location = useLocation();
@@ -22,6 +23,10 @@ function Location() {
   const onChange = (currentSlide) => {
     console.log("currentSlide", currentSlide);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="w-full flex justify-center items-center">

@@ -14,6 +14,9 @@ function Home() {
   const [keyLocation, setKeyLocation] = useState(1);
   const onChange = (key) => {
     setKeyLocation(Number(key));
+    if (Number(key) - 1 != 0) {
+      setData(locations.filter((item) => item.keyLocation == Number(key) - 1));
+    }
   };
   const view = useMemo(() => {
     return (
@@ -71,46 +74,46 @@ function Home() {
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
-    <ConfigProvider
-      theme={{
-        components: {
-          Slider: {
-            trackBg: "#8FAA02",
-            trackHoverBg: "#8FAA02",
-            railBg: "rgb(143 170 2 / 38%)",
-            railHoverBg: "rgb(143 170 2 / 38%)",
-            handleColor: "#8FAA02",
-            handleActiveOutlineColor: "rgb(143 170 2 / 10%)",
-            handleActiveColor: "#8FAA02",
-            dotActiveBorderColor: "#8FAA02",
-          },
-          Tabs: {
-            inkBarColor: "#51412C",
-            itemActiveColor: "#333333",
-            itemColor: "#999999",
-            itemSelectedColor: "#333333",
-          },
-        },
-        token: {
-          colorPrimary: "#9AB302",
-          fontFamily: "Noto Sans",
-        },
-      }}
-    >
-      <HomeContext.Provider value={{ setData, keyLocation }}>
-        <Header />
-        <div className="mt-20 px-5 relative">
-          <Tabs
-            tabBarStyle={{}}
-            centered
-            defaultActiveKey="1"
-            items={items}
-            onChange={onChange}
-          />
-        </div>
-      </HomeContext.Provider>
-    </ConfigProvider>
-    </div>
+        <ConfigProvider
+          theme={{
+            components: {
+              Slider: {
+                trackBg: "#8FAA02",
+                trackHoverBg: "#8FAA02",
+                railBg: "rgb(143 170 2 / 38%)",
+                railHoverBg: "rgb(143 170 2 / 38%)",
+                handleColor: "#8FAA02",
+                handleActiveOutlineColor: "rgb(143 170 2 / 10%)",
+                handleActiveColor: "#8FAA02",
+                dotActiveBorderColor: "#8FAA02",
+              },
+              Tabs: {
+                inkBarColor: "#51412C",
+                itemActiveColor: "#333333",
+                itemColor: "#999999",
+                itemSelectedColor: "#333333",
+              },
+            },
+            token: {
+              colorPrimary: "#9AB302",
+              fontFamily: "Noto Sans",
+            },
+          }}
+        >
+          <HomeContext.Provider value={{ setData, keyLocation }}>
+            <Header />
+            <div className="mt-20 px-5 relative">
+              <Tabs
+                tabBarStyle={{}}
+                centered
+                defaultActiveKey="1"
+                items={items}
+                onChange={onChange}
+              />
+            </div>
+          </HomeContext.Provider>
+        </ConfigProvider>
+      </div>
     </div>
   );
 }

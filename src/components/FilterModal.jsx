@@ -31,7 +31,7 @@ function FilterModal({ open, setOpen }) {
   });
 
   useEffect(() => {
-    onChangForm("keyLocation", keyLocation);
+    onChangForm("keyLocation", Number(keyLocation) - 1);
   }, [keyLocation]);
 
   const onChangForm = (key, value) => {
@@ -61,9 +61,15 @@ function FilterModal({ open, setOpen }) {
     const dataFilter = locations.filter(
       (item) =>
         item.size <= form.size &&
-        (form.heater.length ? form.heater.includes(item.heater) : true)
+        (form.keyLocation == 0 ? true : form.keyLocation == item.keyLocation) &&
+        (form.heater.length ? form.heater.includes(item.heater) : true) &&
+        (form.fridge.length == 2 || form.fridge.length == 0
+          ? true
+          : form.fridge[0] == "冷蔵庫あり"
+          ? item.fridge == 1
+          : item.fridge == "") &&
+        (form.benefit.length ? form.benefit.includes(item.benefit) : true)
     );
-    console.log("dataFilter", dataFilter);
     setData(dataFilter);
     setOpen(false);
   };
