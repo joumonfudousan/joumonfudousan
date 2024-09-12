@@ -20,7 +20,7 @@ function Home() {
       <Flex gap={"large"} vertical>
         {data.map((item, index) => (
           <Flex key={index} gap={"small"} vertical>
-            <Link to={`/proj_hakubuku/ruins/${item.id}`}>
+            <Link to={`/ruins/${item.id}`}>
               <img className="w-[100%] min-h-[240px]" src={item.image} />
             </Link>
             <div className="text-[16px] font-semibold mt-3">

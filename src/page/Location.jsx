@@ -16,7 +16,7 @@ import user2 from "../assets/user2.png";
 function Location() {
   const location = useLocation();
   const parts = location.pathname.split("/");
-  const id = parts[3];
+  const id = parts[2];
   const data = locations[Number(id) - 1];
 
   const onChange = (currentSlide) => {

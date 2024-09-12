@@ -6,10 +6,13 @@ function Loading() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  console.log("a",location.pathname);
+  
+
   useEffect(() => {
-    if (location.pathname === "/proj_hakubuku/") {
+    if (location.pathname === "/") {
       setTimeout(() => {
-        navigate("/proj_hakubuku/home");
+        navigate("/home");
       }, 400);
     }
   }, [location, navigate]);

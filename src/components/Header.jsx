@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className="fixed top-0 w-[100%] px-5 bg-white z-10 flex max-w-[430px]">
       <div className="w-full flex justify-end py-5 gap-10 items-center">
-        <Link to={"/proj_hakubuku/"}>
+        <Link to={"/"}>
           <img className="w-[208px] h-[40px]" src={logo}></img>
         </Link>
         <Flex
