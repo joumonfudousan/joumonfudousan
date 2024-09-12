@@ -20,7 +20,7 @@ function Home() {
       <Flex gap={"large"} vertical>
         {data.map((item, index) => (
           <Flex key={index} gap={"small"} vertical>
-            <Link to={`/ruins/${item.id}`}>
+            <Link to={`/proj_hakubuku/ruins/${item.id}`}>
               <img className="w-[100%] min-h-[240px]" src={item.image} />
             </Link>
             <div className="text-[16px] font-semibold mt-3">
@@ -69,6 +69,8 @@ function Home() {
     },
   ];
   return (
+    <div className="w-full flex justify-center items-center">
+      <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
     <ConfigProvider
       theme={{
         components: {
@@ -108,6 +110,8 @@ function Home() {
         </div>
       </HomeContext.Provider>
     </ConfigProvider>
+    </div>
+    </div>
   );
 }
 

@@ -16,7 +16,7 @@ import user2 from "../assets/user2.png";
 function Location() {
   const location = useLocation();
   const parts = location.pathname.split("/");
-  const id = parts[2];
+  const id = parts[3];
   const data = locations[Number(id) - 1];
 
   const onChange = (currentSlide) => {
@@ -24,7 +24,9 @@ function Location() {
   };
 
   return (
-    <ConfigProvider
+    <div className="w-full flex justify-center items-center">
+      <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
+      <ConfigProvider
       theme={{
         token: {
           colorPrimary: "#9AB302",
@@ -140,6 +142,9 @@ function Location() {
         </Flex>
       </div>
     </ConfigProvider>
+    </div>
+    </div>
+    
   );
 }
 
