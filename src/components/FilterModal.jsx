@@ -30,9 +30,6 @@ function FilterModal({ open, setOpen }) {
     benefit: [],
   });
 
-  console.log("keyLocation", keyLocation);
-  console.log("form", form);
-
   useEffect(() => {
     onChangForm("keyLocation", keyLocation);
   }, [keyLocation]);

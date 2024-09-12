@@ -15,7 +15,6 @@ function Home() {
   const onChange = (key) => {
     setKeyLocation(Number(key));
   };
-  console.log("locations", locations);
   const view = useMemo(() => {
     return (
       <Flex gap={"large"} vertical>
