@@ -7,7 +7,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route index path="/proj_hakubuku/" element={<Loading />} />
+        <Route path="/proj_hakubuku/" element={<Loading />} />
         <Route path="/proj_hakubuku/home" element={<Home />} />
         <Route path="/proj_hakubuku/ruins/*" element={<Location />} />
       </Routes>
