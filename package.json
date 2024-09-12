@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://manhtd-amcolab.github.io/proj_hakubuku",
+  "homepage": "http://amcolab-inc.github.github.io/proj_hakubuku",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
