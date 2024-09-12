@@ -28,7 +28,7 @@ export const locations = [
       "この家には石囲炉が設置され、調理がより便利になっています。また、近くで見つかったナイフ形石器もこの地域の特色を表しており、食事の支度に役立つでしょう！",
     ],
     time: "",
-    keyLocation: "",
+    keyLocation: 1,
     fridge: "",
     benefit: "",
   },

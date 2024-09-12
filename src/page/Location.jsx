@@ -136,7 +136,7 @@ function Location() {
               )
             )}
           </Flex>
-          <Share />
+          <Share data={data} />
         </Flex>
       </div>
     </ConfigProvider>
