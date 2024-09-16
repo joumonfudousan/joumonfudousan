@@ -44,10 +44,10 @@ function Location() {
         <Flex gap={"small"} vertical>
           <Carousel afterChange={onChange}>
             <div className="mb-7">
-              <img className="w-[100%] min-h-[240px]" src={data.image} />
+              <img className="w-[100%] h-[240px]" src={data.image} />
             </div>
             <div className="mb-7">
-              <img className="w-[100%] min-h-[240px]" src={data.image} />
+              <img className="w-[100%] h-[240px]" src={data.imageSub} />
             </div>
           </Carousel>
           <div>

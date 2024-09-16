@@ -19,6 +19,27 @@ import image18 from "../assets/18.bambagaito_ListImage.png";
 import image19 from "../assets/19.kubota_ListImage.png";
 import image20 from "../assets/20.hirono_ListImage.png";
 
+import imageSub1 from "../assets/1.akiba_KV_sub@2.png";
+import imageSub2 from "../assets/2.tochihara_KV_sub@2.png";
+import imageSub3 from "../assets/3.sone_KV_sub@2.png";
+import imageSub4 from "../assets/4.godera_KV_sub@2.png";
+import imageSub5 from "../assets/5.mizuiri_KV_sub@2.png";
+import imageSub6 from "../assets/6.zinmei_KV_sub@2.png";
+import imageSub7 from "../assets/7.mankata_KV_sub@2.png";
+import imageSub8 from "../assets/8.funatsuka_KV_sub@2.png";
+import imageSub9 from "../assets/9.mizukumi_KV_sub@2.png";
+import imageSub10 from "../assets/10.nishikasio_KV_main@2-1.png";
+import imageSub11 from "../assets/11.hikageta_KV_sub@2.png";
+import imageSub12 from "../assets/12.sawaziri_KV_sub@2.png";
+import imageSub13 from "../assets/13.miyanogo_KV_sub@2.png";
+import imageSub14 from "../assets/14.kesadaira_KV_main@2-1.png";
+import imageSub15 from "../assets/15.oyashiki_KV_sub@2.png";
+import imageSub16 from "../assets/16.kamimamba_KV_sub@2.png";
+import imageSub17 from "../assets/17.osuna_KV_sub@2.png";
+import imageSub18 from "../assets/18.bambagaito_KV_sub@2.png";
+import imageSub19 from "../assets/19.kubota_KV_sub@2.png";
+import imageSub20 from "../assets/20.hirono_KV_main@2-1.png";
+
 // 入居者特典
 // const KeyLocation = Object.freeze({
 //   1: "豊田地区",
@@ -43,6 +64,7 @@ export const locations = [
       "★ 近くで見つかったナイフ形石器は、「長興寺遺跡」として紹介されている！",
     ],
     image: image1,
+    imageSub: imageSub1,
     comment: [
       "この家には石囲炉が設置され、調理がより便利になっています。また、近くで見つかったナイフ形石器もこの地域の特色を表しており、食事の支度に役立つでしょう！",
     ],
@@ -64,6 +86,7 @@ export const locations = [
     scene: "豊田市盆地の斜面上",
     outstanding: ["★ お庭に野外炉あり！"],
     image: image2,
+    imageSub: imageSub2,
     comment: [
       "栃原遺跡は、東山町に位置する広々とした一戸建ての住居です。特に注目すべきは、その四角いコンロと庭の野外炉で、料理を楽しみながら自然を感じられる設計がされています。家の内外で自然と調和した生活を送りたい方にとって、理想的な住環境です。",
     ],
@@ -89,6 +112,7 @@ export const locations = [
       "★ 玄関に有難い埋甕あります！",
     ],
     image: image3,
+    imageSub: imageSub3,
     comment: [
       "縄文時代の魅力満載！玄関にはありがたい埋甕やお部屋にはパワーを感じる石棒、さらに豊田スタジアムまで歩いて5分！歴史を感じつつ、スポーツ観戦も楽しめる生活を始めてみませんか？",
       "豊田スタジアムのすぐそばに位置しているため、スポーツやイベントが楽しめる環境です。また、矢作川が近くに流れており、川沿いを散歩するのが日課です。公園も整備されており、家族でのんびりと過ごすには最適な場所です。",
@@ -111,6 +135,7 @@ export const locations = [
     scene: "段丘低位面",
     outstanding: ["★土器敷あり！"],
     image: image4,
+    imageSub: imageSub4,
     comment: [
       "低い立地にありながら、豊田スタジアムからの絶好の眺望を誇ります。炉が備わっていることで、冷え込む季節も温かく過ごすことができ、土器敷が敷かれた部屋は、ユニークなポイントです。",
       "低い立地に位置するが、周辺は開けた景色で、特に豊田スタジアムが見えるのが魅力的です。イベントの日には活気があふれ、地域の文化を感じられます。",
@@ -137,6 +162,7 @@ export const locations = [
       "★ 深鉢プレゼント！",
     ],
     image: image5,
+    imageSub: imageSub5,
     comment: [
       "渡刈町の広大な土地に位置しており、広々とした居住スペースが特徴の一つです。地床炉が備わったキッチンは日々の生活に便利さをもたらし、自然環境と調和した生活が可能です。",
     ],
@@ -158,6 +184,7 @@ export const locations = [
     scene: "-",
     outstanding: ["★炉内土器敷あり！"],
     image: image6,
+    imageSub: imageSub6,
     comment: [
       "東名高速道路の建設をきっかけに発掘調査されました。炉内土器敷がユニークなポイントです。",
     ],
@@ -179,6 +206,7 @@ export const locations = [
     scene: "矢作川中流左岸",
     outstanding: ["★ 珍しい勾玉プレゼント！", "★ 石器プレゼント！"],
     image: image7,
+    imageSub: imageSub7,
     comment: [
       "矢作川と籠川に挟まれた豊かな自然環境に恵まれた地域に位置します。勾玉や石器が多くあり、文化の豊かさを感じられます。",
     ],
@@ -203,6 +231,7 @@ export const locations = [
       "★ 便利な黒曜石プレゼント！",
     ],
     image: image8,
+    imageSub: imageSub8,
     comment: [
       "越戸駅から西に500mの距離に位置するこの地域は、アクセスが良好で、周辺は自然が豊かです。公共の交通機関の利便性と自然環境のバランスが取れた理想的な立地条件を持っています。家の中にはありがたい土偶が安置されており、古代からの力を感じることができます。",
     ],
@@ -229,6 +258,7 @@ export const locations = [
       "★ 45252点 243kgの豪華な道具付き",
     ],
     image: image9,
+    imageSub: imageSub9,
     comment: [
       "矢作川上流の激流近くに位置し、山々に囲まれた豊かな自然環境です。季節の移ろいを感じることができる生活が魅力です。",
       "信州から来たお婿さんが持ち込んだ新しい土器の模様があってね、それがまた文化的な深みを加えているんですよ。",
@@ -255,6 +285,7 @@ export const locations = [
       "★ 84点の石器などをプレゼント！",
     ],
     image: image10,
+    imageSub: imageSub10,
     comment: [
       "切山川の近くにあり、山並みに囲まれた谷底地形で、静かで秘密めいた感じがする場所です。自然の恵みが豊かで、周囲の環境からは季節ごとの変化を感じ取ることができます。",
       "豊田スタジアムのすぐそばに位置しているため、スポーツやイベントが楽しめる環境です。また、矢作川が近くに流れており、川沿いを散歩するのが日課です。公園も整備されており、家族でのんびりと過ごすには最適な場所です。",
@@ -280,6 +311,7 @@ export const locations = [
       "★入居者特典：数百のトチやドングリをプレゼント！",
     ],
     image: image11,
+    imageSub: imageSub11,
     comment: [
       "今回紹介する日陰田遺跡は、山並みに囲まれた谷底に位置する静かな住居です。東向きの傾斜地にあるため、朝日をしっかりと浴びることができます。竪穴住居には貯蔵穴があり、トチやドングリなどの食糧を長期保存することが可能です。自然の恵みを享受しながら、ゆったりとした生活をお楽しみいただけます",
       "竪穴住居であるため、夏は涼しく冬は暖かく過ごせます。住居内には貯蔵穴があり、トチやドングリをたくさん保存できるので、長期的に食糧の心配がありません。住まいの中には、どっしりとした安定感があり、家族全員が安心して生活できます。",
@@ -302,6 +334,7 @@ export const locations = [
     scene: "矢作川中流左岸",
     outstanding: ["★ 台地上で風通り抜群！", "★ 豆の栽培体験ができるかも？"],
     image: image12,
+    imageSub: imageSub12,
     comment: [
       "台地上の緩やかな傾斜に位置しているため、自然の風通しが良く、常に心地よい風が吹き抜けています。狭い谷間の地形に囲まれているので、静かで穏やかな環境が広がっています。",
     ],
@@ -323,6 +356,7 @@ export const locations = [
     scene: "巴川と足助川の合流地点",
     outstanding: ["★ 足助八幡宮からすぐ！"],
     image: image13,
+    imageSub: imageSub13,
     comment: [
       "水のせせらぎが常に心地よく響いています。近くには足助八幡宮があり、日々の生活に安らぎをもたらしてくれます。季節ごとに変わる川沿いの風景が美しく、自然との調和を感じられる場所です。",
     ],
@@ -348,6 +382,7 @@ export const locations = [
       "★ 土偶が多数（22つ）",
     ],
     image: image14,
+    imageSub: imageSub14,
     comment: [
       "足助川の下流に位置しており、川の流れが穏やかで美しいです。中心街にも近く、自然の中にいながらも便利な生活を送ることができます。縄文のビーナスや多数の土偶、耳飾りが発見された場所であり、歴史と文化が息づく特別な住まいです。",
     ],
@@ -369,6 +404,7 @@ export const locations = [
     scene: "大きくカーブする巴川の支流",
     outstanding: ["★ たくさん石が並んでます！（配石遺構）"],
     image: image15,
+    imageSub: imageSub15,
     comment: [
       "住居は大きくカーブする巴川の支流沿いに位置しており、水辺の景色がとても美しいです。大きな配石遺構があり、特にこぶしの石が80cmもあるので、力強い存在感があります。これらの石は古代からのエネルギーを感じさせ、生活に活力を与えてくれます。",
     ],
@@ -390,6 +426,7 @@ export const locations = [
     scene: "-",
     outstanding: ["★ 珍しいコンロあり！"],
     image: image16,
+    imageSub: imageSub16,
     comment: [
       "珍しい土器埋設炉があります。古代の技術を感じさせるこの炉は、家全体に安定した温かさをもたらし、快適な生活をサポートします。",
     ],
@@ -416,6 +453,7 @@ export const locations = [
       "★ 土偶8つ、耳飾り3つをプレゼント！",
     ],
     image: image17,
+    imageSub: imageSub17,
     comment: [
       "神明式土器や唐草模様の装飾が施された土器があり、古代の思いを身近に感じられます。特に、マムシの顔の取手が付いた土器は珍しく神秘的です。自然豊かな環境で、歴史を感じながらのびのびと暮らせます。",
       "在地の縄文を学びながら、長野の文化にも触れられて楽しい毎日です！",
@@ -438,6 +476,7 @@ export const locations = [
     scene: "三河山地の矢作川の左岸",
     outstanding: ["★ 美しい黒曜石プレゼント！"],
     image: image18,
+    imageSub: imageSub18,
     comment: [
       "特に特徴的なのは、黒曜石が多く見られることです。星糞峠からの黒曜石は、光を受けてキラキラと輝く様子が美しいです。",
     ],
@@ -459,6 +498,7 @@ export const locations = [
     scene: "-",
     outstanding: ["★ ダムのすぐ近く！"],
     image: image19,
+    imageSub: imageSub19,
     comment: [
       "住吉の森に隣接しており、周囲は緑豊かな自然に囲まれています。近くにはダム湖があり、水辺の美しい風景を楽しむことができます。",
     ],
@@ -480,6 +520,7 @@ export const locations = [
     scene: "野入川左岸の丘の上",
     outstanding: ["★ ありがたい石棒あり！"],
     image: image20,
+    imageSub: imageSub20,
     comment: [
       "野入川左岸の丘の上に位置する大型住居群です。竪穴住居が8つ並んでおり、広々とした空間で快適な生活を送ることができます。特に、この住居には大型の石棒が存在し、古代の力強いエネルギーを感じることができます。川沿いの美しい風景と古代の文化を感じながら、心豊かな生活を楽しむことができるこの物件で、新たな生活を始めてみませんか。",
     ],
