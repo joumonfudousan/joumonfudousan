@@ -24,15 +24,15 @@ function Home() {
             <Link to={`/ruins/${item.id}`}>
               <img className="w-[100%] min-h-[240px]" src={item.image} />
             </Link>
-            <div className="text-[16px] font-semibold mt-3">
+            <div className="text-[16px] font-semibold mt-3 text-line-height-24">
               {item.describe}
             </div>
             <Flex justify="space-between" vertical={false}>
-              <div className="text-[12px] flex gap-2 flex-auto">
+              <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
                 <img src={location} />
                 {item.location}
               </div>
-              <div className="text-[12px] flex gap-2 flex-auto">
+              <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
                 <img src={ruler} />
                 {item.size ? (
                   <>
@@ -43,7 +43,7 @@ function Home() {
                 )}
               </div>
             </Flex>
-            <div className="text-[12px] flex gap-2 flex-auto">
+            <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
               <img src={iconImage} />
               {item.scene == "-" ? "不明" : item.scene}
             </div>

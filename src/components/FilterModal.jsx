@@ -100,7 +100,7 @@ function FilterModal({ open, setOpen }) {
         <Flex className="mt-10" justify="center" gap={"small"} vertical={false}>
           <Button
             type="text"
-            className="text-[16px] w-[50%] font-semibold text-[#8FAA02]"
+            className="text-[16px] w-[50%] font-semibold text-[#8FAA02] text-line-height-24"
             onClick={() => onClearForm()}
             size="large"
             shape="round"
@@ -112,7 +112,7 @@ function FilterModal({ open, setOpen }) {
             type="primary"
             shape="round"
             onClick={() => onSubmit()}
-            className="flex-auto text-center text-[16px] font-semibold"
+            className="flex-auto text-center text-[16px] font-semibold text-line-height-24"
             size="large"
           >
             検索する
@@ -121,8 +121,8 @@ function FilterModal({ open, setOpen }) {
       }
     >
       <Flex className="cursor-pointer" gap={"small"} vertical>
-        <div className="text-[16px] font-semibold">家の大きさ</div>
-        <div className="text-[14px] font-semibold text-center">
+        <div className="text-[16px] font-semibold text-line-height-24">家の大きさ</div>
+        <div className="text-[14px] font-semibold text-center text-line-height-24">
           下限なし〜８帖
         </div>
         <Slider
@@ -145,13 +145,13 @@ function FilterModal({ open, setOpen }) {
           gap={5}
           vertical={false}
         >
-          <div className="text-[14px] text-[#00000099]">下限なし</div>
+          <div className="text-[14px] text-[#00000099] text-line-height-24">下限なし</div>
           <div className="text-[14px] text-[#00000099]">
             {form.size[0]}〜{form.size[1]}帖
           </div>
         </Flex>
         {/* box 1 */}
-        <div className="text-[16px] font-semibold mt-5">コンロ</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">コンロ</div>
         {dataBox1.map((item, index) => (
           <Checkbox
             key={index}
@@ -165,7 +165,7 @@ function FilterModal({ open, setOpen }) {
         ))}
 
         {/* box 2 */}
-        <div className="text-[16px] font-semibold mt-5">冷蔵庫</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">冷蔵庫</div>
         {dataBox2.map((item, index) => (
           <Checkbox
             key={index}
@@ -179,7 +179,7 @@ function FilterModal({ open, setOpen }) {
         ))}
 
         {/* box 3 */}
-        <div className="text-[16px] font-semibold mt-5">入居者特典</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">入居者特典</div>
         {dataBox3.map((item, index) => (
           <Checkbox
             key={index}
