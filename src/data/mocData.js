@@ -1,29 +1,30 @@
-import image from "../assets/image.png";
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
-import image5 from "../assets/image5.png";
-import image6 from "../assets/image6.png";
-import image7 from "../assets/image7.png";
-import image8 from "../assets/image8.png";
-import image9 from "../assets/image9.png";
-import image10 from "../assets/image10.png";
-import image11 from "../assets/image11.png";
-import image12 from "../assets/image12.png";
-import image13 from "../assets/image13.png";
-import image14 from "../assets/image14.png";
-import image15 from "../assets/image15.png";
-import image16 from "../assets/image16.png";
-import image17 from "../assets/image17.png";
-import image18 from "../assets/image18.png";
-import image19 from "../assets/image19.png";
-import image20 from "../assets/image20.png";
+import image1 from "../assets/1.akiba_ListImage.png";
+import image2 from "../assets/2.tochihara_ListImage.png";
+import image3 from "../assets/3.sone_ListImage.png";
+import image4 from "../assets/4.godera_ListImage.png";
+import image5 from "../assets/5.mizuiri_ListImage.png";
+import image6 from "../assets/6.zinmei_ListImage.png";
+import image7 from "../assets/7.mankata_ListImage.png";
+import image8 from "../assets/8.funatsuka_ListImage.png";
+import image9 from "../assets/9.mizukumi_ListImage.png";
+import image10 from "../assets/10.nishikasio_ListImage.png";
+import image11 from "../assets/11.hikageta_ListImage.png";
+import image12 from "../assets/12.sawaziri_ListImage.png";
+import image13 from "../assets/13.miyanogo_ListImage.png";
+import image14 from "../assets/14.kesadaira_ListImage.png";
+import image15 from "../assets/15.oyashiki_ListImage.png";
+import image16 from "../assets/16.kamimamba_ListImage.png";
+import image17 from "../assets/17.osuna_ListImage.png";
+import image18 from "../assets/18.bambagaito_ListImage.png";
+import image19 from "../assets/19.kubota_ListImage.png";
+import image20 from "../assets/20.hirono_ListImage.png";
 
 // 入居者特典
 // const KeyLocation = Object.freeze({
 //   1: "豊田地区",
 //   2: "足助・藤岡地区",
-//   3: "下山地区",
+//   3: "旭地区",
+//   4: "稲武地区",
 // });
 
 export const locations = [
@@ -41,14 +42,14 @@ export const locations = [
     outstanding: [
       "★ 近くで見つかったナイフ形石器は、「長興寺遺跡」として紹介されている！",
     ],
-    image: image,
+    image: image1,
     comment: [
       "この家には石囲炉が設置され、調理がより便利になっています。また、近くで見つかったナイフ形石器もこの地域の特色を表しており、食事の支度に役立つでしょう！",
     ],
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: [""],
   },
   {
     id: 2,
@@ -69,7 +70,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
   {
     id: 3,
@@ -95,7 +96,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: ["新しい土器が学べる"]
   },
   {
     id: 4,
@@ -117,7 +118,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: [""],
   },
   {
     id: 5,
@@ -142,7 +143,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "アクセサリープレゼント",
+    benefit: [""],
   },
   {
     id: 6,
@@ -163,7 +164,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: [""],
   },
   {
     id: 7,
@@ -184,7 +185,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "アクセサリープレゼント",
+    benefit: ["アクセサリープレゼント"],
   },
   {
     id: 8,
@@ -208,7 +209,7 @@ export const locations = [
     time: "",
     keyLocation: 1,
     fridge: "",
-    benefit: "土偶と暮らせる",
+    benefit: ["土偶と暮らせる", "黒曜石プレゼント"]
   },
   {
     id: 9,
@@ -233,9 +234,9 @@ export const locations = [
       "信州から来たお婿さんが持ち込んだ新しい土器の模様があってね、それがまた文化的な深みを加えているんですよ。",
     ],
     time: "",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: ["新しい土器が学べる"],
   },
   {
     id: 10,
@@ -259,9 +260,9 @@ export const locations = [
       "豊田スタジアムのすぐそばに位置しているため、スポーツやイベントが楽しめる環境です。また、矢作川が近くに流れており、川沿いを散歩するのが日課です。公園も整備されており、家族でのんびりと過ごすには最適な場所です。",
     ],
     time: "",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: 1,
-    benefit: "",
+    benefit: ["アクセサリープレゼント"],
   },
   {
     id: 11,
@@ -284,9 +285,9 @@ export const locations = [
       "竪穴住居であるため、夏は涼しく冬は暖かく過ごせます。住居内には貯蔵穴があり、トチやドングリをたくさん保存できるので、長期的に食糧の心配がありません。住まいの中には、どっしりとした安定感があり、家族全員が安心して生活できます。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: 1,
-    benefit: "アクセサリープレゼント",
+    benefit: ["どんぐりプレゼント"],
   },
   {
     id: 12,
@@ -305,9 +306,9 @@ export const locations = [
       "台地上の緩やかな傾斜に位置しているため、自然の風通しが良く、常に心地よい風が吹き抜けています。狭い谷間の地形に囲まれているので、静かで穏やかな環境が広がっています。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
   {
     id: 13,
@@ -326,9 +327,9 @@ export const locations = [
       "水のせせらぎが常に心地よく響いています。近くには足助八幡宮があり、日々の生活に安らぎをもたらしてくれます。季節ごとに変わる川沿いの風景が美しく、自然との調和を感じられる場所です。",
     ],
     time: "足助八幡宮近く",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
   {
     id: 14,
@@ -351,9 +352,9 @@ export const locations = [
       "足助川の下流に位置しており、川の流れが穏やかで美しいです。中心街にも近く、自然の中にいながらも便利な生活を送ることができます。縄文のビーナスや多数の土偶、耳飾りが発見された場所であり、歴史と文化が息づく特別な住まいです。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: "",
-    benefit: "",
+    benefit: ["土偶と暮らせる"],
   },
   {
     id: 15,
@@ -372,9 +373,9 @@ export const locations = [
       "住居は大きくカーブする巴川の支流沿いに位置しており、水辺の景色がとても美しいです。大きな配石遺構があり、特にこぶしの石が80cmもあるので、力強い存在感があります。これらの石は古代からのエネルギーを感じさせ、生活に活力を与えてくれます。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 2,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
   {
     id: 16,
@@ -386,16 +387,16 @@ export const locations = [
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
     heater: "コンロあり（土器埋設炉）",
-    scene: "?",
+    scene: "-",
     outstanding: ["★ 珍しいコンロあり！"],
     image: image16,
     comment: [
       "珍しい土器埋設炉があります。古代の技術を感じさせるこの炉は、家全体に安定した温かさをもたらし、快適な生活をサポートします。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 3,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: [""],
   },
   {
     id: 17,
@@ -420,9 +421,9 @@ export const locations = [
       "在地の縄文を学びながら、長野の文化にも触れられて楽しい毎日です！",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 3,
     fridge: "",
-    benefit: "土器が学べる",
+    benefit: ["新しい土器が学べる", "土偶と暮らせる", "アクセサリープレゼント"],
   },
   {
     id: 18,
@@ -441,9 +442,9 @@ export const locations = [
       "特に特徴的なのは、黒曜石が多く見られることです。星糞峠からの黒曜石は、光を受けてキラキラと輝く様子が美しいです。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 3,
     fridge: "",
-    benefit: "黒曜石プレゼント",
+    benefit: ['黒曜石プレゼント'],
   },
   {
     id: 19,
@@ -462,9 +463,9 @@ export const locations = [
       "住吉の森に隣接しており、周囲は緑豊かな自然に囲まれています。近くにはダム湖があり、水辺の美しい風景を楽しむことができます。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 3,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
   {
     id: 20,
@@ -483,8 +484,8 @@ export const locations = [
       "野入川左岸の丘の上に位置する大型住居群です。竪穴住居が8つ並んでおり、広々とした空間で快適な生活を送ることができます。特に、この住居には大型の石棒が存在し、古代の力強いエネルギーを感じることができます。川沿いの美しい風景と古代の文化を感じながら、心豊かな生活を楽しむことができるこの物件で、新たな生活を始めてみませんか。",
     ],
     time: "アクセスxxx分",
-    keyLocation: 1,
+    keyLocation: 4,
     fridge: "",
-    benefit: "",
+    benefit: [""],
   },
 ];

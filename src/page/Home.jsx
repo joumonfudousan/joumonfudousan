@@ -14,9 +14,7 @@ function Home() {
   const [keyLocation, setKeyLocation] = useState(1);
   const onChange = (key) => {
     setKeyLocation(Number(key));
-    if (Number(key) - 1 != 0) {
-      setData(locations.filter((item) => item.keyLocation == Number(key) - 1));
-    }
+    setData(locations.filter((item) => item.keyLocation == Number(key)));
   };
   const view = useMemo(() => {
     return (
@@ -36,12 +34,18 @@ function Home() {
               </div>
               <div className="text-[12px] flex gap-2 flex-auto">
                 <img src={ruler} />
-                {item.size}帖 {item.acreage}
+                {item.size ? (
+                  <>
+                    {item.size}帖 {item.acreage}
+                  </>
+                ) : (
+                  "不明"
+                )}
               </div>
             </Flex>
             <div className="text-[12px] flex gap-2 flex-auto">
               <img src={iconImage} />
-              {item.scene}
+              {item.scene == "-" ? "不明" : item.scene}
             </div>
           </Flex>
         ))}
@@ -52,22 +56,22 @@ function Home() {
   const items = [
     {
       key: "1",
-      label: "すべて",
-      children: view,
-    },
-    {
-      key: "2",
       label: "豊田地区",
       children: view,
     },
     {
-      key: "3",
+      key: "2",
       label: "足助・藤岡地区",
       children: view,
     },
     {
+      key: "3",
+      label: "旭地区",
+      children: view,
+    },
+    {
       key: "4",
-      label: "下山地区",
+      label: "稲武地区",
       children: view,
     },
   ];
@@ -96,7 +100,7 @@ function Home() {
             },
             token: {
               colorPrimary: "#9AB302",
-              fontFamily: "Noto Sans",
+              fontFamily: "'Noto Sans', sans-serif",
             },
           }}
         >

@@ -1,5 +1,5 @@
 body {
-    font-family: "Noto Sans JP";
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .ant-modal-title {
@@ -43,4 +43,10 @@ body {
 .ant-tabs-top > div > .ant-tabs-nav::before,
 .ant-tabs-bottom > div > .ant-tabs-nav::before {
     position: relative;
+}
+
+@media screen and (max-width: 389px) {
+    .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+        margin: 0 0 0 22px;
+    }
 }

@@ -35,7 +35,7 @@ function Location() {
       theme={{
         token: {
           colorPrimary: "#9AB302",
-          fontFamily: "Noto Sans",
+          fontFamily: "'Noto Sans', sans-serif",
           colorBgContainer: "#999999",
         },
       }}
