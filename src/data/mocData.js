@@ -94,6 +94,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.358904987704!2d139.54769687577615!3d35.42113827267226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185a5dc847b05d%3A0x3cfbed950a995b91!2s11%20Akibach%C5%8D%2C%20Totsuka%20Ward%2C%20Yokohama%2C%20Kanagawa%20245-0052%2C%20Japan!5e0!3m2!1sen!2s!4v1726541127447!5m2!1sen!2s",
   },
   {
     id: 2,
@@ -117,6 +118,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6529.645128142673!2d137.1844616!3d35.0861659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a0e3fe9015b5%3A0x3129cdadf7a0663!2s2%20Chome%20Higashiyamacho%2C%20Toyota%2C%20Aichi%20471-0014%2C%20Japan!5e0!3m2!1sen!2s!4v1726541176324!5m2!1sen!2s",
   },
   {
     id: 3,
@@ -145,6 +147,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: ["新しい土器が学べる"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1632.497201415866!2d137.17221375!3d35.081872600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a0570dc15de3%3A0xcc1303c2cba28fe0!2s3%20Chome%20Moricho%2C%20Toyota%2C%20Aichi%20471-0806%2C%20Japan!5e0!3m2!1sen!2s!4v1726541264635!5m2!1sen!2s",
   },
   {
     id: 4,
@@ -155,9 +158,9 @@ export const locations = [
     acreage: "-",
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
-    heater: "コンロあり（地床炉）",
+    heater: "コンロあり（土器敷炉）",
     scene: "段丘低位面",
-    outstanding: ["★土器敷あり！"],
+    outstanding: ["★珍しい土器敷あり！"],
     image: image4,
     imageMain: imageMain4,
     imageSub: imageSub4,
@@ -169,6 +172,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1632.6592631603946!2d137.17430464999998!3d35.0737733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a1aa941bb357%3A0x8fced2be59e2329f!2s9%20Chome%20Mitachicho%2C%20Toyota%2C%20Aichi%20471-0811%2C%20Japan!5e0!3m2!1sen!2s!4v1726541314642!5m2!1sen!2s",
   },
   {
     id: 5,
@@ -179,7 +183,7 @@ export const locations = [
     acreage: "4.5m	×	4.3m",
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
-    heater: "コンロあり（地床炉）",
+    heater: "コンロあり（土坑炉）",
     scene: "矢作川右岸の埋没段丘",
     outstanding: [
       "★ 竪穴住居4つ見つかる！",
@@ -196,6 +200,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.0315523401387!2d137.16304914999998!3d35.03094055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a2269f443b5d%3A0xe4386758bd0d4c41!2sShimokasume%20Togaricho%2C%20Toyota%2C%20Aichi%20470-1202%2C%20Japan!5e0!3m2!1sen!2s!4v1726541351014!5m2!1sen!2s",
   },
   {
     id: 6,
@@ -219,6 +224,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.259912465878!2d137.14501724999997!3d35.02522714999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a202bf5911ab%3A0x8d6134fd51011074!2sShinmei%20Oshikamocho%2C%20Toyota%2C%20Aichi%20470-1207%2C%20Japan!5e0!3m2!1sen!2s!4v1726541395382!5m2!1sen!2s",
   },
   {
     id: 7,
@@ -229,7 +235,7 @@ export const locations = [
     acreage: "4.1m	×	3.9m",
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
-    heater: "コンロあり（石囲炉）",
+    heater: "コンロあり（土坑炉）",
     scene: "矢作川中流左岸",
     outstanding: ["★ 珍しい勾玉プレゼント！", "★ 石器プレゼント！"],
     image: image7,
@@ -242,6 +248,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: ["アクセサリープレゼント"],
+    maps: "",
   },
   {
     id: 8,
@@ -268,6 +275,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: ["土偶と暮らせる", "黒曜石プレゼント"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.9544869016036!2d137.1768373!3d35.10784734999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a080ccc823ad%3A0xd59f8abd69338486!2sShimonoda%20Koshidocho%2C%20Toyota%2C%20Aichi%20470-0332%2C%20Japan!5e0!3m2!1sen!2s!4v1726541529015!5m2!1sen!2s",
   },
   {
     id: 9,
@@ -297,6 +305,7 @@ export const locations = [
     keyLocation: 2,
     fridge: "",
     benefit: ["新しい土器が学べる"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.9356793019!2d137.26739584999999!3d35.183155649999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600358494417f7d7%3A0xd185968117c5de52!2sMizukumi%20Shimokawaguchicho%2C%20Toyota%2C%20Aichi%20470-0422%2C%20Japan!5e0!3m2!1sen!2s!4v1726541689452!5m2!1sen!2s",
   },
   {
     id: 10,
@@ -325,6 +334,7 @@ export const locations = [
     keyLocation: 2,
     fridge: 1,
     benefit: ["アクセサリープレゼント"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.6433986329491!2d137.3322952!3d35.17440375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a9d34190582f%3A0x804a3c37f360eeb!2sOmugita%20Nishigashiocho%2C%20Toyota%2C%20Aichi%20444-2532%2C%20Japan!5e0!3m2!1sen!2s!4v1726541731133!5m2!1sen!2s",
   },
   {
     id: 11,
@@ -352,6 +362,7 @@ export const locations = [
     keyLocation: 2,
     fridge: 1,
     benefit: ["どんぐりプレゼント"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.1691726341937!2d137.28852045!3d35.15240144999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a7fcb09ab729%3A0xe8516f70c1391b57!2sHikageda%20Nakadachicho%2C%20Toyota%2C%20Aichi%20444-2517%2C%20Japan!5e0!3m2!1sen!2s!4v1726541765735!5m2!1sen!2s",
   },
   {
     id: 12,
@@ -375,6 +386,7 @@ export const locations = [
     keyLocation: 2,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1631.210180439273!2d137.2978919!3d35.146135799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a874b0d45363%3A0x3dae6afd81ce7a25!2sSawashiri%20Shionosawacho%2C%20Toyota%2C%20Aichi%20444-2516%2C%20Japan!5e0!3m2!1sen!2s!4v1726541808688!5m2!1sen!2s",
   },
   {
     id: 13,
@@ -398,6 +410,7 @@ export const locations = [
     keyLocation: 2,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1631.4445038817992!2d137.31085105!3d35.13444325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a88aa1abb457%3A0x3fdd825749f36fb!2sMiyanoato%20Asukecho%2C%20Toyota%2C%20Aichi%20444-2424%2C%20Japan!5e0!3m2!1sen!2s!4v1726541842518!5m2!1sen!2s",
   },
   {
     id: 14,
@@ -425,6 +438,7 @@ export const locations = [
     keyLocation: 2,
     fridge: "",
     benefit: ["土偶と暮らせる"],
+    maps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3262.889009767348!2d137.3082761!3d35.1344432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a8fecce1523d%3A0xf711fc2fb0153b17!2sHisaido%20Asukecho%2C%20Toyota%2C%20Aichi%20444-2424%2C%20Japan!5e0!3m2!1sen!2s!4v1726541863907!5m2!1sen!2s",
   },
   {
     id: 15,
@@ -448,6 +462,7 @@ export const locations = [
     keyLocation: 2,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.456849313706!2d137.37260554999997!3d35.14522555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004abdfd1f10493%3A0x7a817b69326bd346!2sOyashiki%20Kawamotecho%2C%20Toyota%2C%20Aichi%20444-2403%2C%20Japan!5e0!3m2!1sen!2s!4v1726541905676!5m2!1sen!2s",
   },
   {
     id: 16,
@@ -471,6 +486,7 @@ export const locations = [
     keyLocation: 3,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.418072285997!2d137.37288905!3d35.2458536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600354271c745029%3A0x81fc97b8ae03e41d!2sKamimanba%20Azakaicho%2C%20Toyota%2C%20Aichi%20444-2832%2C%20Japan!5e0!3m2!1sen!2s!4v1726541935144!5m2!1sen!2s",
   },
   {
     id: 17,
@@ -500,6 +516,7 @@ export const locations = [
     keyLocation: 3,
     fridge: "",
     benefit: ["新しい土器が学べる", "土偶と暮らせる", "アクセサリープレゼント"],
+    maps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3258.418072285997!2d137.3703141!3d35.2458536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003542bab608d13%3A0xe8bbc3e6ee1cd02d!2sOsuna%20Shimogiricho%2C%20Toyota%2C%20Aichi%20444-2833%2C%20Japan!5e0!3m2!1sen!2s!4v1726541970066!5m2!1sen!2s",
   },
   {
     id: 18,
@@ -523,6 +540,7 @@ export const locations = [
     keyLocation: 3,
     fridge: "",
     benefit: ["黒曜石プレゼント"],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.3637753157154!2d137.2760597!3d35.097626250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a614c20d5451%3A0x5c23605ee4bbf80e!2sGejigaito%20Shirakuracho%2C%20Toyota%2C%20Aichi%20444-2327%2C%20Japan!5e0!3m2!1sen!2s!4v1726542002181!5m2!1sen!2s",
   },
   {
     id: 19,
@@ -546,6 +564,7 @@ export const locations = [
     keyLocation: 3,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d104378.85750892972!2d137.5022761!3d35.1606284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004aaaa3d30460b%3A0xde4c75c9a49e7a6a!2sUshijicho%2C%20Toyota%2C%20Aichi%20444-2801%2C%20Japan!5e0!3m2!1sen!2s!4v1726542033049!5m2!1sen!2s",
   },
   {
     id: 20,
@@ -569,5 +588,6 @@ export const locations = [
     keyLocation: 4,
     fridge: "",
     benefit: [""],
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.2446860414816!2d137.53625499999998!3d35.250167999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b560d4ad2bfdb%3A0xc33ceafb363db2ca!2sKashiwabora!5e0!3m2!1sen!2s!4v1726542057294!5m2!1sen!2s",
   },
 ];

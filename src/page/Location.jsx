@@ -8,7 +8,6 @@ import iconImage from "../assets/image.svg";
 import home from "../assets/home.svg";
 import material from "../assets/material.svg";
 import flame from "../assets/flame.svg";
-import map from "../assets/map.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import { useEffect } from "react";
@@ -16,8 +15,9 @@ import { useEffect } from "react";
 function Location() {
   const location = useLocation();
   const parts = location.pathname.split("/");
-  const id = parts[2];
-  const data = locations[Number(id) - 1];
+  const name = decodeURIComponent(parts[2]);
+  const getData = locations.filter((item) => item.name == name);
+  const data = getData.length ? getData[0] : [];
 
   const onChange = (currentSlide) => {
     console.log("currentSlide", currentSlide);
@@ -100,7 +100,15 @@ function Location() {
                   </div>
                 ))}
               </Flex>
-              <img className="w-[100%] min-h-[200px]" src={map} />
+              <iframe
+                title="Google Maps"
+                width="100%"
+                height="200px"
+                src={data.maps}
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-lg"
+              />
               <Flex gap={"small"} className="mt-5" vertical>
                 {data.comment.map((value, index) =>
                   index == 0 ? (
