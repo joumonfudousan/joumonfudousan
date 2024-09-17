@@ -2,8 +2,9 @@ import { Flex } from "antd";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import modalIcon from "../assets/modalIcon.png";
-import FilterModal from "./FilterModal";
+// import FilterModal from "./FilterModal";
 import { Link } from "react-router-dom";
+import FilterDrawer from "./FilterDrawer";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -19,13 +20,14 @@ function Header() {
           gap={"small"}
           align="center"
           vertical
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen(!open)}
         >
           <img className="w-[16px] h-[16px]" src={modalIcon}></img>{" "}
           <div className="text-[12px]">絞り込み</div>
         </Flex>
       </div>
-      <FilterModal open={open} setOpen={setOpen} />
+      {/* <FilterModal open={open} setOpen={setOpen} /> */}
+      <FilterDrawer open={open} setOpen={setOpen} />
     </div>
   );
 }

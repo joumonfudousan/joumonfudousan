@@ -59,25 +59,36 @@ body {
 
 .text-line-height-28 {
     line-height: 28px;
-    letter-spacing: 0.04em; 
+    letter-spacing: 0.04em;
 }
 
 .text-line-height-24 {
     line-height: 24px;
-    letter-spacing: 0.04em; 
+    letter-spacing: 0.04em;
 }
 
 .text-line-height-23 {
     line-height: 23.8px;
-    letter-spacing: 0.04em; 
+    letter-spacing: 0.04em;
 }
 
 .text-line-height-20 {
     line-height: 20.4px;
-    letter-spacing: 0.04em; 
+    letter-spacing: 0.04em;
 }
 
 .text-line-height-18 {
     line-height: 18px;
-    letter-spacing: 0.04em; 
+    letter-spacing: 0.04em;
+}
+
+/* drawer */
+.ant-drawer-header {
+    display: none !important;
+}
+
+@media screen and (max-width: 450px) {
+    .ant-drawer-content-wrapper {
+        width: 100% !important;
+    }
 }
