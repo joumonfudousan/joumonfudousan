@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { locations } from "../data/mocData";
-import { Carousel, ConfigProvider, Flex } from "antd";
+import { Carousel, ConfigProvider, Flex, Image } from "antd";
 import Share from "../components/Share";
 import locationImage from "../assets/location.svg";
 import ruler from "../assets/ruler.svg";
@@ -10,7 +10,7 @@ import material from "../assets/material.svg";
 import flame from "../assets/flame.svg";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function Location() {
   const location = useLocation();
@@ -18,6 +18,15 @@ function Location() {
   const name = decodeURIComponent(parts[2]);
   const getData = locations.filter((item) => item.name == name);
   const data = getData.length ? getData[0] : [];
+  const carouselRef = useRef(null);
+
+  const next = () => {
+    carouselRef.current.next();
+  };
+
+  const prev = () => {
+    carouselRef.current.prev();
+  };
 
   const onChange = (currentSlide) => {
     console.log("currentSlide", currentSlide);
@@ -41,12 +50,28 @@ function Location() {
         >
           <div className="mt-5 px-5 relative">
             <Flex gap={"small"} vertical>
-              <Carousel afterChange={onChange}>
-                <div className="mb-7">
-                  <img className="w-[100%] h-[304px]" src={data.imageMain} />
+              <Carousel ref={carouselRef} afterChange={onChange}>
+                <div
+                  className="mb-7"
+                  onClick={() => next()}
+                  style={{ outline: "none", border: "none" }}
+                >
+                  <Image
+                    className="w-[100%] h-[304px] outline-none"
+                    src={data.imageMain}
+                    preview={false}
+                  />
                 </div>
-                <div className="mb-7">
-                  <img className="w-[100%] h-[304px]" src={data.imageSub} />
+                <div
+                  className="mb-7"
+                  onClick={() => prev()}
+                  style={{ outline: "none", border: "none" }}
+                >
+                  <Image
+                    className="w-[100%] h-[304px] outline-none"
+                    src={data.imageSub}
+                    preview={false}
+                  />
                 </div>
               </Carousel>
               <div>
