@@ -22,9 +22,10 @@ function Share({ data }) {
       <Helmet>
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogp} />
+        <meta property="og:image" content={"https://amcolab-inc.github.io/proj_hakubuku//assets/OGP_original-BM9RkSX2.png"} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+        <meta property="og:image:alt" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -32,18 +33,18 @@ function Share({ data }) {
       </Helmet>
       <div className="mt-5 bg-[#FDF9F1] rounded-md p-6 flex flex-col gap-5">
         <div className="text-[16px] font-semibold flex gap-2">
-          <img className="w-[22px] h-[21px]" src={git} />
+          <img className="w-[22px] h-[21px] text-line-height-24" src={git} />
           プレゼント企画
         </div>
-        <div className="text-[14px]">
+        <div className="text-[14px] text-line-height-23">
           SNSやLINEで「縄文不動産」のお家を共有してもらうと、博物館からプレゼントがあります！
           ぜひお気に入りの物件をご家族やお友達に共有してください✨
         </div>
-        <div className="text-[12px] text-[#666666]">
+        <div className="text-[12px] text-[#666666] text-line-height-20">
           ※2024年10月12日時点（なくなり次第終了します。）
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
-          <div className="text-[12px] text-center">このページをシェア</div>
+          <div className="text-[12px] text-center text-line-height-18">このページをシェア</div>
           <div className="flex gap-2 cursor-pointer">
             <TwitterShareButton url={url} title={title}>
               <img className="w-[32px] h-[32px]" src={xIcon} />
