@@ -248,7 +248,7 @@ export const locations = [
     keyLocation: 1,
     fridge: "",
     benefit: ["アクセサリープレゼント"],
-    maps: "",
+    maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.003393463498!2d137.1719873!3d35.10662615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a07e919395c9%3A0x35d4f8d4d834f40f!2sMankada%20Araicho%2C%20Toyota%2C%20Aichi%20470-0333%2C%20Nh%E1%BA%ADt%20B%E1%BA%A3n!5e0!3m2!1svi!2s!4v1726644269150!5m2!1svi!2s",
   },
   {
     id: 8,
