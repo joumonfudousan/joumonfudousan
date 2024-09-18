@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://amcolab-inc.github.github.io/proj_hakubuku",
+  "homepage": "http://TakeHonami.github.github.io/joumonfudousan",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
