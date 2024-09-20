@@ -73,6 +73,7 @@ export const locations = [
   {
     id: 1,
     name: "秋葉遺跡",
+    nameEg: "akiba",
     describe: "長興寺近くのコンロ付き一軒家",
     location: "森町3丁目",
     size: 8,
@@ -99,6 +100,7 @@ export const locations = [
   {
     id: 2,
     name: "栃原遺跡",
+    nameEg: "tochihara",
     describe: "東山町の四角いコンロ付き一軒家",
     location: "東山町2丁目",
     size: 10,
@@ -123,6 +125,7 @@ export const locations = [
   {
     id: 3,
     name: "曽根遺跡",
+    nameEg: "sone",
     describe: "豊田スタジアム徒歩5分の一軒家",
     location: "森町3丁目",
     size: 19,
@@ -152,6 +155,7 @@ export const locations = [
   {
     id: 4,
     name: "牛寺遺跡",
+    nameEg: "godera",
     describe: "豊田スタジアムが見える平野の一軒家",
     location: "御立町9丁目、野見町4丁目",
     size: 0,
@@ -177,13 +181,14 @@ export const locations = [
   {
     id: 5,
     name: "水入遺跡",
+    nameEg: "mizuiri",
     describe: "渡刈町の広大な家",
     location: "渡刈町下糟目",
     size: 12,
     acreage: "4.5m	×	4.3m",
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
-    heater: "コンロあり（土坑炉）",
+    heater: "コンロあり（土坑炉か）",
     scene: "矢作川右岸の埋没段丘",
     outstanding: [
       "★ 竪穴住居4つ見つかる！",
@@ -205,6 +210,7 @@ export const locations = [
   {
     id: 6,
     name: "神明遺跡",
+    nameEg: "zinmei",
     describe: "鴛鴨の四角い家",
     location: "鴛鴨町神明ほか",
     size: 12,
@@ -229,13 +235,14 @@ export const locations = [
   {
     id: 7,
     name: "万加田遺跡",
+    nameEg: "mankata",
     describe: "籠川と矢作川ちかく平野のお家",
     location: "荒井町万加田",
     size: 17,
     acreage: "4.1m	×	3.9m",
     home: "一戸建て・1K・1階",
     material: "木造、土ぶき",
-    heater: "コンロあり（土坑炉）",
+    heater: "コンロあり（土坑炉か）",
     scene: "矢作川中流左岸",
     outstanding: ["★ 珍しい勾玉プレゼント！", "★ 石器プレゼント！"],
     image: image7,
@@ -253,6 +260,7 @@ export const locations = [
   {
     id: 8,
     name: "船塚遺跡",
+    nameEg: "funatsuka",
     describe: "越戸駅すぐの土偶と暮らせるお家",
     location: "越戸町下能田",
     size: 0,
@@ -280,6 +288,7 @@ export const locations = [
   {
     id: 9,
     name: "水汲遺跡",
+    nameEg: "mizukumi",
     describe: "信州からお婿さんが来る！異文化に触れられるお家",
     location: "下川口水汲ほか",
     size: 0,
@@ -310,6 +319,7 @@ export const locations = [
   {
     id: 10,
     name: "西樫尾町大麦田遺跡",
+    nameEg: "nishikasio",
     describe: "冷蔵庫付き！切山川沿いのお家",
     location: "西樫尾町大麦田",
     size: 0,
@@ -339,6 +349,7 @@ export const locations = [
   {
     id: 11,
     name: "日陰田遺跡",
+    nameEg: "hikageta",
     describe: "山並みに囲まれた谷底の貯蔵穴付き住居",
     location: "中立町日陰田ほか",
     size: 8,
@@ -367,6 +378,7 @@ export const locations = [
   {
     id: 12,
     name: "沢尻遺跡",
+    nameEg: "sawaziri",
     describe: "緩やかな台地上に立つ一軒家",
     location: "塩ノ沢町沢尻ほか",
     size: 14,
@@ -391,6 +403,7 @@ export const locations = [
   {
     id: 13,
     name: "宮ノ後遺跡",
+    nameEg: "miyanogo",
     describe: "巴川と足助川の合流地点に佇む住居",
     location: "足助町宮ノ後",
     size: 0,
@@ -415,6 +428,7 @@ export const locations = [
   {
     id: 14,
     name: "今朝平遺跡",
+    nameEg: "kesadaira",
     describe: "足助地区の中心街すぐの一軒家",
     location: "足助町久井戸町ほか",
     size: 0,
@@ -443,7 +457,8 @@ export const locations = [
   {
     id: 15,
     name: "大屋敷遺跡",
-    describe: "古代からのエネルギーを感じる巴川近くの一軒家",
+    nameEg: "oyashiki",
+    describe: "古代からのエネルギーを感じるの一軒家",
     location: "川面町大屋敷ほか",
     size: 0,
     acreage: "-",
@@ -467,6 +482,7 @@ export const locations = [
   {
     id: 16,
     name: "上万場遺跡",
+    nameEg: "kamimamba",
     describe: "珍しいコンロ付き一軒家",
     location: "浅谷町上万場ほか",
     size: 13,
@@ -491,6 +507,7 @@ export const locations = [
   {
     id: 17,
     name: "大砂遺跡",
+    nameEg: "osuna",
     describe: "神秘的なマムシの取手と古代装飾が魅力の住居",
     location: "下切町大砂",
     size: 12,
@@ -521,6 +538,7 @@ export const locations = [
   {
     id: 18,
     name: "万場垣内遺跡",
+    nameEg: "bambagaito",
     describe: "黒曜石が輝く三河山地の一軒家",
     location: "牛地町万場垣内ほか",
     size: 15,
@@ -545,6 +563,7 @@ export const locations = [
   {
     id: 19,
     name: "久保田遺跡",
+    nameEg: "kubota",
     describe: "ダム湖近くの住吉の森に佇む竪穴住居",
     location: "牛地町久保田ほか",
     size: 8,
@@ -569,6 +588,7 @@ export const locations = [
   {
     id: 20,
     name: "ヒロノ遺跡",
+    nameEg: "hirono",
     describe: "野入川を見渡す丘の上に佇む大型住居群",
     location: "大野瀬町ヒロノ",
     size: 8,

@@ -75,7 +75,7 @@ function FilterModal({ open, setOpen }) {
       (item) =>
         item.size >= form.size[0] &&
         item.size <= form.size[1] &&
-        form.keyLocation == item.keyLocation &&
+        (form.keyLocation == 0 ? true : form.keyLocation == item.keyLocation) &&
         (form.heater.length ? form.heater.includes(item.heater) : true) &&
         (form.fridge.length == 2 || form.fridge.length == 0
           ? true
@@ -121,7 +121,9 @@ function FilterModal({ open, setOpen }) {
       }
     >
       <Flex className="cursor-pointer" gap={"small"} vertical>
-        <div className="text-[16px] font-semibold text-line-height-24">家の大きさ</div>
+        <div className="text-[16px] font-semibold text-line-height-24">
+          家の大きさ
+        </div>
         <div className="text-[14px] font-semibold text-center text-line-height-24">
           下限なし〜８帖
         </div>
@@ -145,13 +147,17 @@ function FilterModal({ open, setOpen }) {
           gap={5}
           vertical={false}
         >
-          <div className="text-[14px] text-[#00000099] text-line-height-24">下限なし</div>
+          <div className="text-[14px] text-[#00000099] text-line-height-24">
+            下限なし
+          </div>
           <div className="text-[14px] text-[#00000099]">
             {form.size[0]}〜{form.size[1]}帖
           </div>
         </Flex>
         {/* box 1 */}
-        <div className="text-[16px] font-semibold mt-5 text-line-height-24">コンロ</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">
+          コンロ
+        </div>
         {dataBox1.map((item, index) => (
           <Checkbox
             key={index}
@@ -165,7 +171,9 @@ function FilterModal({ open, setOpen }) {
         ))}
 
         {/* box 2 */}
-        <div className="text-[16px] font-semibold mt-5 text-line-height-24">冷蔵庫</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">
+          冷蔵庫
+        </div>
         {dataBox2.map((item, index) => (
           <Checkbox
             key={index}
@@ -179,7 +187,9 @@ function FilterModal({ open, setOpen }) {
         ))}
 
         {/* box 3 */}
-        <div className="text-[16px] font-semibold mt-5 text-line-height-24">入居者特典</div>
+        <div className="text-[16px] font-semibold mt-5 text-line-height-24">
+          入居者特典
+        </div>
         {dataBox3.map((item, index) => (
           <Checkbox
             key={index}

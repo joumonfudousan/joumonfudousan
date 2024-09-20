@@ -11,17 +11,21 @@ export const HomeContext = createContext();
 
 function Home() {
   const [data, setData] = useState(locations);
-  const [keyLocation, setKeyLocation] = useState(1);
+  const [keyLocation, setKeyLocation] = useState(0);
   const onChange = (key) => {
     setKeyLocation(Number(key));
-    setData(locations.filter((item) => item.keyLocation == Number(key)));
+    if (Number(key) == 0) {
+      setData(locations)
+    } else {
+      setData(locations.filter((item) => item.keyLocation == Number(key)));
+    }
   };
   const view = useMemo(() => {
     return (
       <Flex gap={"large"} vertical>
         {data.map((item, index) => (
           <Flex key={index} gap={"small"} vertical>
-            <Link to={`/ruins/${item.name}`}>
+            <Link to={`/ruins/${item.nameEg}`}>
               <img className="w-[100%] min-h-[240px]" src={item.image} />
             </Link>
             <div className="text-[16px] font-semibold mt-3 text-line-height-24">
@@ -54,6 +58,11 @@ function Home() {
   }, [data]);
 
   const items = [
+    {
+      key: "0",
+      label: "すべて",
+      children: view,
+    },
     {
       key: "1",
       label: "豊田地区",
@@ -106,11 +115,11 @@ function Home() {
         >
           <HomeContext.Provider value={{ setData, keyLocation }}>
             <Header />
-            <div className="mt-20 px-5 relative">
+            <div className="mt-20 px-4 relative">
               <Tabs
                 tabBarStyle={{}}
                 centered
-                defaultActiveKey="1"
+                defaultActiveKey={keyLocation}
                 items={items}
                 onChange={onChange}
               />
