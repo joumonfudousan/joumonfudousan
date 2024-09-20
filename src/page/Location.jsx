@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { locations } from "../data/mocData";
 import { Carousel, ConfigProvider, Flex, Image } from "antd";
 import Share from "../components/Share";
@@ -10,13 +10,14 @@ import material from "../assets/material.svg";
 import flame from "../assets/flame.svg";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
+import logo from "../assets/logo.png";
 import { useEffect, useRef } from "react";
 
 function Location() {
   const location = useLocation();
   const parts = location.pathname.split("/");
   const name = decodeURIComponent(parts[2]);
-  const getData = locations.filter((item) => item.name == name);
+  const getData = locations.filter((item) => item.nameEg == name);
   const data = getData.length ? getData[0] : [];
   const carouselRef = useRef(null);
 
@@ -37,8 +38,15 @@ function Location() {
   }, [location]);
 
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
+    <div className="w-full flex justify-center items-center relative">
+      <div className="fixed top-0 w-[100%] z-[999] flex max-w-[430px]">
+        <div className="w-full flex justify-center bg-white py-5 gap-10 items-center absolute">
+          <Link to={"/"}>
+            <img className="w-[208px] h-[40px]" src={logo}></img>
+          </Link>
+        </div>
+      </div>
+      <div className="mt-[90px] w-full max-w-[430px] flex flex-col justify-center mb-[130px]">
         <ConfigProvider
           theme={{
             token: {
@@ -48,7 +56,7 @@ function Location() {
             },
           }}
         >
-          <div className="mt-5 px-5 relative">
+          <div className="px-4">
             <Flex gap={"small"} vertical>
               <Carousel ref={carouselRef} afterChange={onChange}>
                 <div

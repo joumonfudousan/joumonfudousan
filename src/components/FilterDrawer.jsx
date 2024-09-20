@@ -79,7 +79,7 @@ const FilterDrawer = ({ open, setOpen }) => {
       (item) =>
         item.size >= form.size[0] &&
         item.size <= form.size[1] &&
-        form.keyLocation == item.keyLocation &&
+        (form.keyLocation == 0 ? true : form.keyLocation == item.keyLocation) &&
         (form.heater.length ? form.heater.includes(item.heater) : true) &&
         (form.fridge.length == 2 || form.fridge.length == 0
           ? true
