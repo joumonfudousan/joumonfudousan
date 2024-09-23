@@ -5,32 +5,32 @@ import Share from "../components/Share";
 import { useEffect, useRef } from "react";
 
 function Detail({ params }) {
-  const name = params;
-  const getData = locations.filter((item) => item.nameEg == name);
-  const data = getData.length ? getData[0] : [];
-  const carouselRef = useRef(null);
+  // const name = params;
+  // const getData = locations.filter((item) => item.nameEg == name);
+  // const data = getData.length ? getData[0] : [];
+  // const carouselRef = useRef(null);
 
-  const next = () => {
-    carouselRef.current.next();
-  };
+  // const next = () => {
+  //   carouselRef.current.next();
+  // };
 
-  const prev = () => {
-    carouselRef.current.prev();
-  };
+  // const prev = () => {
+  //   carouselRef.current.prev();
+  // };
 
-  const onChange = (currentSlide) => {
-    console.log("currentSlide", currentSlide);
-  };
+  // const onChange = (currentSlide) => {
+  //   console.log("currentSlide", currentSlide);
+  // };
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo(0, 0);
-    }
-  }, [params]);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.scrollTo(0, 0);
+  //   }
+  // }, [params]);
 
   return (
     <div className="w-full flex justify-center items-center relative">
-      <div className="fixed top-0 w-[100%] z-[999] flex max-w-[430px]">
+      {/* <div className="fixed top-0 w-[100%] z-[999] flex max-w-[430px]">
         <div className="w-full flex justify-center bg-white py-5 gap-10 items-center absolute">
           <a href={"/"}>
             <img className="w-[208px] h-[40px]" src="../assets/logo.png"></img>
@@ -171,7 +171,7 @@ function Detail({ params }) {
             </Flex>
           </div>
         </ConfigProvider>
-      </div>
+      </div> */}
     </div>
   );
 }
