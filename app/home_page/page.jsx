@@ -1,4 +1,4 @@
-import Home from "./home/page";
+import Home from "../home/page";
 
 const title = "縄文不動産";
 const description = "縄文不動産";
@@ -24,6 +24,8 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+const HomePage = () => {
   return <Home />;
-}
+};
+
+export default HomePage;
