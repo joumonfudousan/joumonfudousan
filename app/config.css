@@ -1,0 +1,110 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.ant-modal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-modal-centered {
+    background-color: #ffff !important;
+}
+
+.ant-modal-content {
+    background-color: #ffff !important;
+    min-height: 95vh !important;
+    box-shadow: none !important;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+    width: auto;
+}
+
+.ant-carousel .slick-dots li {
+    width: auto;
+}
+
+.ant-carousel .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+    position: relative;
+}
+
+.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+    margin: 0 0 0 22px;
+}
+
+@media screen and (max-width: 420px) {
+    .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+        margin: 0 0 0 18px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+        margin: 0 0 0 15px;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+        margin: 0 0 0 11px;
+    }
+}
+
+.text-comment {
+    font-weight: 400;
+    line-height: 24.5px;
+    letter-spacing: 0.04em;
+}
+
+.text-line-height-28 {
+    line-height: 28px;
+    letter-spacing: 0.04em;
+}
+
+.text-line-height-24 {
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+
+.text-line-height-23 {
+    line-height: 23.8px;
+    letter-spacing: 0.04em;
+}
+
+.text-line-height-20 {
+    line-height: 20.4px;
+    letter-spacing: 0.04em;
+}
+
+.text-line-height-18 {
+    line-height: 18px;
+    letter-spacing: 0.04em;
+}
+
+/* drawer */
+.ant-drawer-header {
+    display: none !important;
+}
+
+@media screen and (max-width: 450px) {
+    .ant-drawer-content-wrapper {
+        width: 100% !important;
+    }
+}
