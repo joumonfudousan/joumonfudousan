@@ -7,7 +7,6 @@ const ogp =
   "https://363f-222-252-21-148.ngrok-free.app/images/OGP_original.png";
 
 export async function generateMetadata({ params }) {
-  console.log("params", params.detail);
   return {
     title: title,
     description: description,
@@ -36,7 +35,7 @@ export async function generateStaticParams() {
 }
 
 const DetailPage = ({ params, searchParams }) => {
-  return <Detail />;
+  return <Detail params={params.detail} />;
 };
 
 export default DetailPage;

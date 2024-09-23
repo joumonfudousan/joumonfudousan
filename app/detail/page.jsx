@@ -4,10 +4,8 @@ import { Carousel, ConfigProvider, Flex, Image } from "antd";
 import Share from "../components/Share";
 import { useEffect, useRef } from "react";
 
-function Detail() {
-  const location = window.location.href;
-  const parts = location.split("/");
-  const name = parts[parts.length - 1];
+function Detail({params}) {
+  const name = params;
   const getData = locations.filter((item) => item.nameEg == name);
   const data = getData.length ? getData[0] : [];
   const carouselRef = useRef(null);
