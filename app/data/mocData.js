@@ -628,9 +628,9 @@ export const locations = [
     outstanding: [
       "★ 近くで見つかったナイフ形石器は、「長興寺遺跡」として紹介されている！",
     ],
-    image: "image1",
-    imageMain: "imageMain1",
-    imageSub: "imageSub1",
+    image: "https://treobangron.com.vn/wp-content/uploads/2024/01/2.jpg",
+    imageMain: "https://treobangron.com.vn/wp-content/uploads/2024/01/2.jpg",
+    imageSub: "https://treobangron.com.vn/wp-content/uploads/2024/01/2.jpg",
     comment: [
       "この家には石囲炉が設置され、調理がより便利になっています。また、近くで見つかったナイフ形石器もこの地域の特色を表しており、食事の支度に役立つでしょう！",
     ],
