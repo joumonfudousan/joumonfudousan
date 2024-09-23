@@ -28,7 +28,8 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  const slugs = locations.map((item) => item.nameEg);
+  const slugs = ["akiba"];
+  // locations.map((item) => item.nameEg);
   return slugs.map((slug) => ({
     detail: slug,
   }));
