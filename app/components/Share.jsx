@@ -7,11 +7,13 @@ import {
 
 // eslint-disable-next-line react/prop-types
 function Share({ data }) {
-  const url = window.location.href;
+  let url = "url";
+
+  if (typeof window !== "undefined") {
+    url = window.location.href;
+  }
   // eslint-disable-next-line react/prop-types
   const title = data.name;
-  // eslint-disable-next-line react/prop-types
-  const description = data.describe;
   return (
     <>
       <div className="mt-5 bg-[#FDF9F1] rounded-md p-5 flex flex-col gap-5">

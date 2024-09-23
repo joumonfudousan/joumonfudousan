@@ -4,7 +4,7 @@ import { Carousel, ConfigProvider, Flex, Image } from "antd";
 import Share from "../components/Share";
 import { useEffect, useRef } from "react";
 
-function Detail({params}) {
+function Detail({ params }) {
   const name = params;
   const getData = locations.filter((item) => item.nameEg == name);
   const data = getData.length ? getData[0] : [];
@@ -23,8 +23,10 @@ function Detail({params}) {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, [params]);
 
   return (
     <div className="w-full flex justify-center items-center relative">
