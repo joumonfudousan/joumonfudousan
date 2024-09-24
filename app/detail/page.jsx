@@ -3,12 +3,14 @@ import { locations } from "../data/mocData";
 import { Carousel, ConfigProvider, Flex, Image } from "antd";
 import Share from "../components/Share";
 import { useEffect, useRef } from "react";
+import { base_path } from "../home/page";
 
 function Detail({ params }) {
   const name = params;
   const getData = locations.filter((item) => item.nameEg == name);
   const data = getData.length ? getData[0] : [];
   const carouselRef = useRef(null);
+  const base_asset = "";
 
   const next = () => {
     carouselRef.current.next();
@@ -32,8 +34,8 @@ function Detail({ params }) {
     <div className="w-full flex justify-center items-center relative">
       <div className="fixed top-0 w-[100%] z-[999] flex max-w-[430px]">
         <div className="w-full flex justify-center bg-white py-5 gap-10 items-center absolute">
-          <a href={"/"}>
-            <img className="w-[208px] h-[40px]" src="../assets/logo.png"></img>
+          <a href={`${base_path}`}>
+            <img className="w-[208px] h-[40px]" src={`..${base_asset}/assets/logo.png`}></img>
           </a>
         </div>
       </div>
@@ -83,11 +85,11 @@ function Detail({ params }) {
               </div>
               <Flex justify="space-between" vertical={false}>
                 <div className="text-[12px] flex gap-2 w-[50%] text-line-height-18">
-                  <img src="../assets/location.svg" />
+                  <img src={`..${base_asset}/assets/location.svg`} />
                   {data.location}
                 </div>
                 <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                  <img src="../assets/ruler.svg" />
+                  <img src={`..${base_asset}/assets/ruler.svg`} />
                   {data.size !== 0 ? (
                     <>
                       {data.size}帖 {data.acreage}
@@ -99,11 +101,11 @@ function Detail({ params }) {
               </Flex>
               <Flex justify="space-between" vertical={false}>
                 <div className="text-[12px] flex gap-2 w-[50%] text-line-height-18">
-                  <img src="../assets/home.svg" />
+                  <img src={`..${base_asset}/assets/home.svg`} />
                   {data.home}
                 </div>
                 <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                  <img src="../assets/material.svg" />
+                  <img src={`..${base_asset}/assets/material.svg`} />
                   {data.material}
                 </div>
               </Flex>
@@ -111,12 +113,12 @@ function Detail({ params }) {
                 <div className="text-[12px] flex gap-2 w-[50%] items-start text-line-height-18">
                   <img
                     className="w-[12px] h-[18px]"
-                    src="../assets/flame.svg"
+                    src={`..${base_asset}/assets/flame.svg`}
                   />
                   {data.heater != "-" ? data.heater : "不明"}
                 </div>
                 <div className="text-[12px] flex gap-2 flex-auto w-[50%] items-start text-line-height-18">
-                  <img className="mt-[4px]" src="../assets/image.svg" />
+                  <img className="mt-[4px]" src={`..${base_asset}/assets/image.svg`} />
                   {data.scene != "-" ? data.scene : "不明"}
                 </div>
               </Flex>
@@ -146,7 +148,7 @@ function Detail({ params }) {
                       <Flex gap={"small"} vertical={false}>
                         <img
                           className="w-[96px] h-[96px]"
-                          src="../assets/user1.png"
+                          src={`..${base_asset}/assets/user1.png`}
                         />
                         <div className="text-[14px] text-comment">{value}</div>
                       </Flex>
@@ -159,7 +161,7 @@ function Detail({ params }) {
                       <Flex gap={"small"} vertical={false}>
                         <img
                           className="w-[96px] h-[96px]"
-                          src="../assets/user2.png"
+                          src={`..${base_asset}/assets/user2.png`}
                         />
                         <div className="text-[14px] text-comment">{value}</div>
                       </Flex>

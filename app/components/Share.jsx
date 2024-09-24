@@ -8,6 +8,7 @@ import {
 // eslint-disable-next-line react/prop-types
 function Share({ data }) {
   let url = "url";
+  const base_asset = "";
 
   if (typeof window !== "undefined") {
     url = window.location.href;
@@ -20,7 +21,7 @@ function Share({ data }) {
         <div className="text-[16px] font-semibold flex gap-2">
           <img
             className="w-[22px] h-[21px] text-line-height-24"
-            src="../assets/git.svg"
+            src={`..${base_asset}/assets/git.svg`}
           />
           プレゼント企画
         </div>
@@ -40,13 +41,13 @@ function Share({ data }) {
           </div>
           <div className="flex gap-2 cursor-pointer">
             <TwitterShareButton url={url} title={title}>
-              <img className="w-[32px] h-[32px]" src="../assets/x.svg" />
+              <img className="w-[32px] h-[32px]" src={`..${base_asset}/assets/x.svg`} />
             </TwitterShareButton>
             <LineShareButton url={url} title={title}>
-              <img className="w-[32px] h-[32px]" src="../assets/line.svg" />
+              <img className="w-[32px] h-[32px]" src={`..${base_asset}/assets/line.svg`} />
             </LineShareButton>
             <FacebookShareButton url={url} quote={title}>
-              <img className="w-[32px] h-[32px]" src="../assets/facebook.svg" />
+              <img className="w-[32px] h-[32px]" src={`..${base_asset}/assets/facebook.svg`} />
             </FacebookShareButton>
           </div>
         </div>

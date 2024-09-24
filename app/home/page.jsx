@@ -5,6 +5,8 @@ import { createContext, useMemo, useState } from "react";
 import Header from "../components/Header";
 
 export const HomeContext = createContext();
+export const base_asset = process.env.NEXT_PUBLIC_ASSET_PATH;
+export const base_path = process.env.NEXT_PUBLIC_BASE_PATH;
 
 function Home() {
   const [data, setData] = useState(locations);
@@ -22,7 +24,7 @@ function Home() {
       <Flex gap={"large"} vertical>
         {data.map((item, index) => (
           <Flex key={index} gap={"small"} vertical>
-            <a href={`/detail_page/${item.nameEg}`}>
+            <a href={`${base_path}/detail_page/${item.nameEg}`}>
               <img className="w-[100%] min-h-[240px]" src={item.image} />
             </a>
             <div className="text-[16px] font-semibold mt-3 text-line-height-24">
@@ -30,11 +32,11 @@ function Home() {
             </div>
             <Flex justify="space-between" vertical={false}>
               <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                <img src="../assets/location.svg" />
+                <img src={`..${base_asset}/assets/location.svg`} />
                 {item.location}
               </div>
               <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                <img src="../assets/ruler.svg" />
+                <img src={`..${base_asset}/assets/ruler.svg`} />
                 {item.size ? (
                   <>
                     {item.size}帖 {item.acreage}
@@ -45,7 +47,7 @@ function Home() {
               </div>
             </Flex>
             <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-              <img src="../assets/image.svg" />
+              <img src={`..${base_asset}/assets/image.svg`} />
               {item.scene == "-" ? "不明" : item.scene}
             </div>
           </Flex>
