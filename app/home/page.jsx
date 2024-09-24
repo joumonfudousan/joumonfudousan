@@ -1,8 +1,9 @@
 "use client";
 import { ConfigProvider, Flex, Tabs } from "antd";
 import { locations } from "../data/mocData";
-import { createContext, useMemo, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 
 export const HomeContext = createContext();
 export const base_asset = process.env.NEXT_PUBLIC_ASSET_PATH;
@@ -11,6 +12,7 @@ export const base_path = process.env.NEXT_PUBLIC_BASE_PATH;
 function Home() {
   const [data, setData] = useState(locations);
   const [keyLocation, setKeyLocation] = useState(0);
+  const [loading, setLoading] = useState(true);
   const onChange = (key) => {
     setKeyLocation(Number(key));
     if (Number(key) == 0) {
@@ -19,6 +21,11 @@ function Home() {
       setData(locations.filter((item) => item.keyLocation == Number(key)));
     }
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 350);
+  }, []);
   const view = useMemo(() => {
     return (
       <Flex gap={"large"} vertical>
@@ -84,49 +91,56 @@ function Home() {
     },
   ];
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
-        <ConfigProvider
-          theme={{
-            components: {
-              Slider: {
-                trackBg: "#8FAA02",
-                trackHoverBg: "#8FAA02",
-                railBg: "rgb(143 170 2 / 38%)",
-                railHoverBg: "rgb(143 170 2 / 38%)",
-                handleColor: "#8FAA02",
-                handleActiveOutlineColor: "rgb(143 170 2 / 10%)",
-                handleActiveColor: "#8FAA02",
-                dotActiveBorderColor: "#8FAA02",
-              },
-              Tabs: {
-                inkBarColor: "#51412C",
-                itemActiveColor: "#333333",
-                itemColor: "#999999",
-                itemSelectedColor: "#333333",
-              },
-            },
-            token: {
-              colorPrimary: "#9AB302",
-              fontFamily: "'Noto Sans', sans-serif",
-            },
-          }}
-        >
-          <HomeContext.Provider value={{ setData, keyLocation }}>
-            <Header />
-            <div className="mt-20 px-4 relative">
-              <Tabs
-                tabBarStyle={{}}
-                centered
-                defaultActiveKey={keyLocation}
-                items={items}
-                onChange={onChange}
-              />
-            </div>
-          </HomeContext.Provider>
-        </ConfigProvider>
-      </div>
-    </div>
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="w-full flex justify-center items-center">
+          {" "}
+          <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
+            <ConfigProvider
+              theme={{
+                components: {
+                  Slider: {
+                    trackBg: "#8FAA02",
+                    trackHoverBg: "#8FAA02",
+                    railBg: "rgb(143 170 2 / 38%)",
+                    railHoverBg: "rgb(143 170 2 / 38%)",
+                    handleColor: "#8FAA02",
+                    handleActiveOutlineColor: "rgb(143 170 2 / 10%)",
+                    handleActiveColor: "#8FAA02",
+                    dotActiveBorderColor: "#8FAA02",
+                  },
+                  Tabs: {
+                    inkBarColor: "#51412C",
+                    itemActiveColor: "#333333",
+                    itemColor: "#999999",
+                    itemSelectedColor: "#333333",
+                  },
+                },
+                token: {
+                  colorPrimary: "#9AB302",
+                  fontFamily: "'Noto Sans', sans-serif",
+                },
+              }}
+            >
+              <HomeContext.Provider value={{ setData, keyLocation }}>
+                <Header />
+                <div className="mt-20 px-4 relative">
+                  <Tabs
+                    tabBarStyle={{}}
+                    centered
+                    defaultActiveKey={keyLocation}
+                    items={items}
+                    onChange={onChange}
+                  />
+                </div>
+              </HomeContext.Provider>
+            </ConfigProvider>
+          </div>{" "}
+        </div>
+      )}
+    </>
   );
 }
 
