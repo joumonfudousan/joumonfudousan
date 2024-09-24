@@ -2,7 +2,7 @@ import { locations } from "../../data/mocData";
 import Detail from "../../detail/page";
 
 export async function generateMetadata({ params }) {
-  const name = params;
+  const name = params.detail;
   const getData = locations.filter((item) => item.nameEg == name);
   const data = getData.length ? getData[0] : null;
 
