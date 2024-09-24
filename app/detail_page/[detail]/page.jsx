@@ -1,12 +1,20 @@
 import { locations } from "../../data/mocData";
 import Detail from "../../detail/page";
 
-const title = "縄文不動産";
-const description = "縄文不動産";
-const ogp =
-  "https://363f-222-252-21-148.ngrok-free.app/images/OGP_original.png";
-
 export async function generateMetadata({ params }) {
+  const name = params;
+  const getData = locations.filter((item) => item.nameEg == name);
+  const data = getData.length ? getData[0] : null;
+
+  let title = "";
+  let description = "";
+  const ogp =
+    "https://manhtd-amcolab.github.io/next_page/images/OGP_original.png";
+
+  if (data) {
+    title = `🏡 縄文不動産で「${data.describe} - ${data.name} - 」を縄文不動産でチェック✨`;
+  }
+
   return {
     title: title,
     description: description,

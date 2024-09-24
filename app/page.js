@@ -3,7 +3,7 @@ import Home from "./home/page";
 const title = "縄文不動産";
 const description = "縄文不動産";
 const ogp =
-  "https://363f-222-252-21-148.ngrok-free.app/images/OGP_original.png";
+  "https://manhtd-amcolab.github.io/next_page/images/OGP_original.png";
 
 export const metadata = {
   title: title,
