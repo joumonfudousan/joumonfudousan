@@ -15,11 +15,6 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const onChange = (key) => {
     setKeyLocation(Number(key));
-    if (Number(key) == 0) {
-      setData(locations);
-    } else {
-      setData(locations.filter((item) => item.keyLocation == Number(key)));
-    }
   };
   useEffect(() => {
     setTimeout(() => {
@@ -81,12 +76,7 @@ function Home() {
     },
     {
       key: "3",
-      label: "旭地区",
-      children: view,
-    },
-    {
-      key: "4",
-      label: "稲武地区",
+      label: "旭・稲武地区",
       children: view,
     },
   ];
