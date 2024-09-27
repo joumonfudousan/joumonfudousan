@@ -173,7 +173,7 @@ function Detail({ params }) {
                                 className="w-[96px] h-[96px]"
                                 src={`..${base_asset}/assets/user1.png`}
                               />
-                              <div className="text-[14px] text-comment">
+                              <div className="text-[14px] text-comment" style={{ whiteSpace: 'pre-line' }}>
                                 {value}
                               </div>
                             </Flex>
@@ -188,7 +188,7 @@ function Detail({ params }) {
                                 className="w-[96px] h-[96px]"
                                 src={`..${base_asset}/assets/user2.png`}
                               />
-                              <div className="text-[14px] text-comment">
+                              <div className="text-[14px] text-comment" style={{ whiteSpace: 'pre-line' }}>
                                 {value}
                               </div>
                             </Flex>

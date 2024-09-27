@@ -24,7 +24,6 @@ const dataBox3 = [
 const FilterDrawer = ({ open, setOpen }) => {
   const { setData, keyLocation } = useContext(HomeContext);
   const [form, setForm] = useState({
-    keyLocation: keyLocation,
     size: [0, 19],
     heater: [],
     fridge: [],
@@ -35,10 +34,6 @@ const FilterDrawer = ({ open, setOpen }) => {
     setOpen(false);
   };
 
-  useEffect(() => {
-    onChangForm("keyLocation", Number(keyLocation));
-  }, [keyLocation]);
-
   const onChangForm = (key, value) => {
     setForm((prev) => ({
       ...prev,
@@ -48,7 +43,6 @@ const FilterDrawer = ({ open, setOpen }) => {
 
   const onClearForm = () => {
     setForm({
-      keyLocation: keyLocation,
       size: [0, 19],
       heater: [],
       fridge: [],
@@ -84,7 +78,7 @@ const FilterDrawer = ({ open, setOpen }) => {
       (item) =>
         item.size >= form.size[0] &&
         item.size <= form.size[1] &&
-        (form.keyLocation == 0 ? true : form.keyLocation == item.keyLocation) &&
+        (keyLocation == 0 ? true : keyLocation == item.keyLocation) &&
         (form.heater.length ? form.heater.includes(item.heater) : true) &&
         (form.fridge.length == 2 || form.fridge.length == 0
           ? true
@@ -99,6 +93,9 @@ const FilterDrawer = ({ open, setOpen }) => {
     setOpen(false);
   };
 
+  useEffect(()=>{
+    onSubmit()
+  }, [keyLocation])
   return (
     <>
       <Drawer title="絞り込み" onClose={onClose} open={open}>
@@ -135,9 +132,9 @@ const FilterDrawer = ({ open, setOpen }) => {
           <div className="text-[16px] font-semibold text-line-height-24 mt-2">
             家の大きさ
           </div>
-          <div className="text-[14px] font-semibold text-center text-line-height-24">
+          {/* <div className="text-[14px] font-semibold text-center text-line-height-24">
             下限なし〜８帖
-          </div>
+          </div> */}
           <Slider
             styles={{
               track: {
@@ -162,7 +159,8 @@ const FilterDrawer = ({ open, setOpen }) => {
               下限なし
             </div>
             <div className="text-[14px] text-[#00000099]">
-              {form.size[0]}〜{form.size[1]}帖
+              {/* {form.size[0]}〜 */}
+              {form.size[1]}帖
             </div>
           </Flex>
           {/* box 1 */}
