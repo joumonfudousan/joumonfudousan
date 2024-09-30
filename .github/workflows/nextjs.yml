@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # add CNAME
+      - name: Add CNAME file
+        run: |
+          echo "joumonfudousan.com" > ./out/CNAME
       - name: Detect package manager
         id: detect-package-manager
         run: |
