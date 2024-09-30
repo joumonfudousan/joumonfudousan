@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fdetail_page\u002F[detail]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
