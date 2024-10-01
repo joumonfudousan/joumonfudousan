@@ -78,8 +78,8 @@ jobs:
       # reply all path /next/
       - name: Fix paths for GitHub Pages
         run: |
-          find ./out -name "*.html" -exec sed -i 's|/_next|./_next|g' {} +
-          find ./out -name "*.js" -exec sed -i 's|/_next|./_next|g' {} +
+          find ./out -maxdepth 1 -type f \( -name "*.html" -o -name "*.js" \) -exec sed -i 's|/_next|./_next|g' {} +
+          find ./out/detail_page -type f \( -name "*.html" -o -name "*.js" \) -exec sed -i 's|/_next|./../_next|g' {} +
       # add CNAME
       - name: Add CNAME file
         run: |
