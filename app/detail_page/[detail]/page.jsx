@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
   let title = "";
   let description = "";
   const ogp =
-    "https://manhtd-amcolab.github.io/next_page/images/OGP_original.png";
+    "https://joumonfudousan.com/images/OGP_original.png";
 
   if (data) {
     title = `🏡 縄文不動産で「${data.describe} - ${data.name} - 」をチェック✨`;

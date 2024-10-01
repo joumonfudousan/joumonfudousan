@@ -46,7 +46,7 @@ function Detail({ params }) {
         <div className="w-full flex justify-center items-center relative">
           <div className="fixed top-0 w-[100%] z-[999] flex max-w-[430px]">
             <div className="w-full flex justify-center bg-white py-5 gap-10 items-center absolute">
-              <a href={`${base_path}`}>
+              <a href="/">
                 <img
                   className="w-[208px] h-[40px]"
                   src={`..${base_asset}/assets/logo.png`}
