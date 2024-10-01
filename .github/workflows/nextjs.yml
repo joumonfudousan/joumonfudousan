@@ -75,6 +75,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      # reply all path /next/
+      - name: Fix paths for GitHub Pages
+        run: |
+          find ./out -name "*.html" -exec sed -i 's|/_next|./_next|g' {} +
+          find ./out -name "*.js" -exec sed -i 's|/_next|./_next|g' {} +
       # add CNAME
       - name: Add CNAME file
         run: |
