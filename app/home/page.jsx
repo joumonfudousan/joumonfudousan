@@ -97,7 +97,7 @@ function Home() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-center overflow-y-hidden">
           {" "}
           <div className="w-full max-w-[430px] flex flex-col justify-center relative">
             <ConfigProvider
