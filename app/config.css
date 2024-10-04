@@ -108,3 +108,23 @@ body {
         width: 100% !important;
     }
 }
+
+/* Custom CSS */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* fix tab */
+/* .ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+    position: fixed !important;
+    z-index: 9999 !important;
+    top: 5rem !important;
+    background-color: #ffff !important;
+    padding-right: 8px;
+} */

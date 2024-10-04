@@ -23,38 +23,50 @@ function Home() {
   }, []);
   const view = useMemo(() => {
     return (
-      <Flex gap={"large"} vertical>
-        {data.map((item, index) => (
-          <Flex key={index} gap={"small"} vertical>
-            <a href={`${base_path}detail_page/${item.nameEg}`}>
-              <img className="w-[100%] min-h-[240px]" src={item.image} />
-            </a>
-            <div className="text-[16px] font-semibold mt-3 text-line-height-24">
-              {item.describe}
-            </div>
-            <Flex justify="space-between" vertical={false}>
-              <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                <img src={`..${base_asset}/assets/location.svg`} />
-                {item.location}
+      <div
+        style={{
+          height: "calc(100vh - 150px)",
+          minHeight: "calc(100vh - 150px)",
+        }}
+        className="overflow-y-auto scrollbar-hide"
+      >
+        <Flex gap={"large"} vertical>
+          {data.map((item, index) => (
+            <Flex key={index} gap={"small"} vertical>
+              <a href={`${base_path}detail_page/${item.nameEg}`}>
+                <img className="w-[100%] min-h-[240px]" src={item.image} />
+              </a>
+              <div className="text-[16px] font-semibold mt-3 text-line-height-24">
+                {item.describe}
               </div>
-              <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                <img src={`..${base_asset}/assets/ruler.svg`} />
-                {item.size ? (
-                  <>
-                    {item.size}帖 {item.acreage}
-                  </>
-                ) : (
-                  "不明"
-                )}
+              <Flex justify="space-between" vertical={false}>
+                <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
+                  <img src={`..${base_asset}/assets/location.svg`} />
+                  {item.location}
+                </div>
+                <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
+                  <img src={`..${base_asset}/assets/ruler.svg`} />
+                  {item.size ? (
+                    <>
+                      {item.size}帖 {item.acreage}
+                    </>
+                  ) : (
+                    "不明"
+                  )}
+                </div>
+              </Flex>
+              <div
+                className={`text-[12px] flex gap-2 flex-auto text-line-height-18 ${
+                  data.length == index + 1 ? "mb-[90px]" : ""
+                }`}
+              >
+                <img src={`..${base_asset}/assets/image.svg`} />
+                {item.scene == "-" ? "不明" : item.scene}
               </div>
             </Flex>
-            <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-              <img src={`..${base_asset}/assets/image.svg`} />
-              {item.scene == "-" ? "不明" : item.scene}
-            </div>
-          </Flex>
-        ))}
-      </Flex>
+          ))}
+        </Flex>
+      </div>
     );
   }, [data]);
 
@@ -87,7 +99,7 @@ function Home() {
       ) : (
         <div className="w-full flex justify-center items-center">
           {" "}
-          <div className="w-full max-w-[430px] flex flex-col justify-center relative mb-[130px]">
+          <div className="w-full max-w-[430px] flex flex-col justify-center relative">
             <ConfigProvider
               theme={{
                 components: {
