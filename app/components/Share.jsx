@@ -14,7 +14,7 @@ function Share({ data }) {
     url = window.location.href;
   }
   // eslint-disable-next-line react/prop-types
-  const title = `🏡 縄文不動産で「${data.describe} - ${data.name} - 」をチェック✨`;
+  const title = `🏡 #縄文不動産で「${data.describe} - ${data.name} - 」をチェック✨`;
   return (
     <>
       <div className="mt-5 bg-[#FDF9F1] rounded-md p-5 flex flex-col gap-5">

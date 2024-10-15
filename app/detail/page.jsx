@@ -99,12 +99,18 @@ function Detail({ params }) {
                     </div>
                   </div>
                   <Flex justify="space-between" vertical={false}>
-                    <div className="text-[12px] flex gap-2 w-[50%] text-line-height-18">
-                      <img src={`..${base_asset}/assets/location.svg`} />
+                    <div className="text-[12px] flex items-center gap-2 w-[50%] text-line-height-18">
+                      <img
+                        className="w-[12px] h-[18px]"
+                        src={`..${base_asset}/assets/location.svg`}
+                      />
                       {data.location}
                     </div>
-                    <div className="text-[12px] flex gap-2 flex-auto text-line-height-18">
-                      <img src={`..${base_asset}/assets/ruler.svg`} />
+                    <div className="text-[12px] flex items-center gap-2 flex-auto text-line-height-18">
+                      <img
+                        className="w-[12px] h-[18px]"
+                        src={`..${base_asset}/assets/ruler.svg`}
+                      />
                       {data.size !== 0 ? (
                         <>
                           {data.size}帖 {data.acreage}
@@ -173,7 +179,10 @@ function Detail({ params }) {
                                 className="w-[96px] h-[96px]"
                                 src={`..${base_asset}/assets/user1.png`}
                               />
-                              <div className="text-[14px] text-comment" style={{ whiteSpace: 'pre-line' }}>
+                              <div
+                                className="text-[14px] text-comment"
+                                style={{ whiteSpace: "pre-line" }}
+                              >
                                 {value}
                               </div>
                             </Flex>
@@ -188,7 +197,10 @@ function Detail({ params }) {
                                 className="w-[96px] h-[96px]"
                                 src={`..${base_asset}/assets/user2.png`}
                               />
-                              <div className="text-[14px] text-comment" style={{ whiteSpace: 'pre-line' }}>
+                              <div
+                                className="text-[14px] text-comment"
+                                style={{ whiteSpace: "pre-line" }}
+                              >
                                 {value}
                               </div>
                             </Flex>

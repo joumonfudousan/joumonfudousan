@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
     "https://joumonfudousan.com/images/OGP_original.png";
 
   if (data) {
-    title = `🏡 縄文不動産で「${data.describe} - ${data.name} - 」をチェック✨`;
+    title = `🏡 #縄文不動産で「${data.describe} - ${data.name} - 」をチェック✨`;
   }
 
   return {
