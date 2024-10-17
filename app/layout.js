@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import "./config.css";
+import Script from 'next/script';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,11 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-VQC8RWPYTP"
-        ></script>
-        <script
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-VQC8RWPYTP`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
